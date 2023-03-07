@@ -1,0 +1,70 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+<div class="container">
+    <!-- Start Heading -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8 center">
+            <h1 class="uppercase mb-1">{{ section.settings.title }}</h1> 
+            <h2 class="h5 uppercase">{{ section.settings.sub_title }}</h2>
+        </div>
+    </div>
+    <!-- End Heading -->
+    <div class="row mt-5">
+        {% if section.blocks.size > 0 %}
+            {% for block in section.blocks %}
+                {% liquid 
+                    assign isStepsEnabled = section.settings.step
+                    if isStepsEnabled 
+                        assign index = forloop.index
+                    else 
+                        assign index = ""
+                    endif
+                %}
+                <div class="col-lg-3 col-md-6">
+                    {% render 'product-card', product_card_product: block.settings.add_product, step: index %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Additional Products",
+    "tag": "section",
+    "class": "spaced-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Complete the glow"
+        },
+        {
+            "type": "text",
+            "id": "sub_title",
+            "label": "Sub Title",
+            "default": "Additional products to compliment your routine"
+        },
+        {
+            "type": "checkbox",
+            "id": "step",
+            "label": "Show Steps",
+            "default": false
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Products",
+            "type": "products",
+            "settings": [
+                {
+                    "type": "product",
+                    "id": "add_product",
+                    "label": "Product"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

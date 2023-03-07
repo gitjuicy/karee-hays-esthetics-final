@@ -1,0 +1,50 @@
+{% comment %} {{ 'center-text.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+{% comment %} <div class="container wrapper">
+<h1>{{ section.settings.main_text }}</h1>
+  <p>{{ section.settings.secondary_text }}</p>
+  <button onclick="window.location='{{ section.settings.button_link }}';">{{ section.settings.button_text }}</button>
+</div> {% endcomment %}
+{% schema %}
+  {
+      "name": "Center text section",
+      "tag":"section",
+      "class":"center-text-with-button",
+      "settings":[
+      {
+        "type": "text",
+        "id": "main_text",
+        "label": "Main Text",
+        "default": "Karee Hays Esthetics"
+      },
+      {
+        "type": "text",
+        "id": "secondary_text",
+        "label": "Secondary Text",
+        "default": "The ultimate daily skincare practices to achieve clear, radiant skin"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "Discover More"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+    ],
+    "presets": [
+      {
+       "name": "Center text section"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

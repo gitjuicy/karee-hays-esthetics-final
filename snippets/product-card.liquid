@@ -1,0 +1,41 @@
+{%- liquid
+    if step and step != blank
+       assign num = step
+    endif
+%}
+
+<div class="card-wrapper">
+    <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link">
+        {% render 'object-image', path: product_card_product.featured_media %}
+
+        {% if num != blank %}
+            <h1 class="h2"><em>Step {{ num }}</em></h1>
+        {% endif %}
+
+        <h2 class="product-card-title h4 uppercase">
+            <!--a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link"-->
+                {{ product_card_product.title }}
+            <!--/a-->
+        </h2>
+
+        <span class="product-card-price">{% if product_card_product.price_varies %}From {% endif %} {% render 'price', product: product_card_product %}</span>
+
+        <!--a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link uppercase atc-btn"-->
+        <span class="uppercase atc-btn">
+          Shop
+        </span>
+        <!--/a-->
+
+        {% comment %}
+        {% if product_card_product.price_varies %}
+            <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link uppercase atc-btn">
+                Choose option
+            </a>
+        {% else %}
+        <a href="{{ routes.cart_add_url }}?id={{ product_card_product.selected_or_first_available_variant.id }}&quantity=1" class="full-unstyled-link uppercase atc-btn">
+                Add to cart
+            </a>
+        {% endif %}
+        {% endcomment %}
+    </a>
+</div>

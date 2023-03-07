@@ -1,0 +1,47 @@
+{{ 'section-home-instagram.css' | asset_url | stylesheet_tag }}
+
+<div class="container instagram-container" style='display: none'>
+    <!-- Start Heading Section -->
+    <div class="row justify-content-center">
+        <div class="col-lg-10 center">
+            <h2 class="h3 uppercase mt-0">{{ section.settings.sub_title }}</h1>
+            <h3 class="h2 uppercase mt-0">Follow us on <a href="https://www.instagram.com/kareehaysesthetics/" class="link link--text uppercase" target="_blank">@instagram</a>!</h2>
+        </div>
+    </div>
+    <!-- End Heading Section -->
+
+    <!-- Start Instagram Section -->
+    <div class="row mt-5 justify-content-center instagram-feed">
+    </div>
+    <!-- End Instagram Section -->
+</div>
+
+<script src="{{ 'instagram.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+    "name": "Instagram",
+    "tag": "section",
+    "class": "spaced-section home-insta",
+    "settings": [
+        {
+            "type": "text",
+            "id": "sub_title",
+            "label": "Sub Title",
+            "default": "Social Media"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "label",
+            "default": "Follow Us On Instagram!"
+        }
+    ],
+    "presets": [
+      {
+      "name": "Instagram",
+      "category": "Images"
+      }
+    ]
+}
+{% endschema %}

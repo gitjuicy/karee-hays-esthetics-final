@@ -1,0 +1,266 @@
+.services-section-b {
+  background-color: #f8f8f8;
+  padding: 8%;
+  text-align: center;
+  position: relative;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+
+.margin-zero {
+  margin-top: 0;
+}
+
+.services-section-b,
+.services-section-c,
+.services-section-d,
+.services-section-e,
+.services-section-g,
+.services-section-h,
+.services-section-i {
+  margin: 0px;
+}
+
+.services-section-b h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.services-section-b p {
+  margin: 0 auto 2em auto;
+  max-width: 600px;
+}
+
+.services-section-c {
+  text-align: center;
+}
+
+.services-section-c h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.services-section-c > p {
+  text-align-last: center;
+  max-width: 600px;
+  margin: 0 auto 2em auto;
+}
+
+.services-section-c > img {
+  margin: 0 auto 2em auto;
+}
+
+.services-section-d, .services-section-g {
+  background-color: #f8f8f8;
+  width: 100%;
+}
+
+.services-section-d h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.services-section-d p {
+  text-align-last: center;
+  margin: 0 auto 2em auto;
+}
+
+.services-section-d-right, .services-section-g-left {
+  padding: 8%;
+  text-align: center;
+}
+
+.services-section-e-section .container {
+  width: 100%;
+}
+
+.services-section-e img {
+  width: 100%;
+  padding: 0rem;
+}
+
+.services-section-e, .services-section-f, .services-section-h, .services-section-i, .services-section-j {
+  text-align: center;
+  width: 100%;
+}
+
+.services-section-g h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.services-section-g-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-section-g-left p {
+  margin: 0 auto 2em auto;
+}
+
+.services-section-h h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.services-section-h p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section-h-left, .section-h-right {
+  padding: 0 5%;
+}
+
+.services-section-i h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.services-section-i p {
+  margin: 0 auto 2em auto;
+  max-width: 800px;
+}
+
+.services-section-j.shopify-section {
+  padding: 50px 0;
+}
+
+.services-section-j {
+  background-color: #f8f8f8;
+}
+
+.services-section-j h2 {
+  font-family: var(--font-body-family);
+}
+
+.services-section-j .card-wrapper .atc-btn {
+  font-weight: 600;
+}
+
+.section-e-right, .section-e-left {
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-e-right h3, .section-e-left h3 {
+  margin-top: 0;
+}
+
+.section-e-right p, .section-e-left p {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 2em auto;
+}
+
+.section-e-right .button, .section-e-left .button {
+  width: auto;
+  margin: 0 auto;
+  min-width: 270px;
+}
+
+.services-section-b p {
+  margin-bottom: 2em;
+}
+
+.services-section-l-section .container > h3 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.services-section-l h3 {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.services-section-l {
+  position: relative;
+}
+
+.services-section-l img {
+  width: 100%;
+}
+
+.services-section-l-row {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-section-l p {
+  margin-top: 0;
+  margin-bottom: 2em;
+  flex-grow: 1;
+}
+
+.services-section-l-row .button {
+  width: auto;
+  margin: 0 auto;
+}
+
+.servicesTitle {
+  max-height: 50vh;
+}
+
+@media only screen and (max-width: 767px) {
+  .services-section-b h3,
+  .services-section-c h3,
+  .services-section-d h3,
+  .services-section-e h3,
+  .services-section-g h3,
+  .services-section-h h3,
+  .services-section-i h3,
+  .services-section-l-section h3 {
+    font-size: 2rem;
+  }
+
+  .services-section-c p, .services-section-b p, .services-section-g-left p, .services-section-i p {
+    width: auto;
+  }
+
+  .section-e-left {
+    margin-bottom: 3em;
+  }
+
+  .services-section-e img {
+    width: 100%;
+    padding: 0rem 0rem;
+  }
+
+  .services-section-g-right {
+    order: 1;
+  }
+
+  .services-section-g-left {
+    order: 2;
+  }
+
+  .section-h-left {
+    margin-bottom: 5rem;
+  }
+
+  .services-section-l-row:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .services-section-h {
+    font-size: 10px;
+  }
+  .services-section-h h3 {
+    font-size: 1.3rem;
+  }
+}

@@ -1,71 +1,162 @@
-.search__input.field__input {
-  padding-right: 9.8rem;
+.template-search__header {
+    margin-bottom: 3rem;
 }
 
-.search__button {
-  right: var(--inputs-border-width);
-  top: var(--inputs-border-width);
+.template-search__search {
+    margin: 0 auto 3.5rem;
+    max-width: 47.8rem;
 }
 
-.reset__button {
-  right: calc(var(--inputs-border-width) + 4.4rem);
-  top: var(--inputs-border-width);
+.template-search__search .search {
+    margin-top: 3rem;
 }
 
-.reset__button:not(:focus-visible)::after {
-  border-right: 0.1rem solid rgba(var(--color-foreground), 0.08);
-  display: block;
-  height: calc(100% - 1.6rem);
-  content: '';
-  position: absolute;
-  right: 0;
+.template-search--empty {
+    padding-bottom: 18rem;
 }
 
-.reset__button:not(:focus)::after {
-  border-right: 0.1rem solid rgba(var(--color-foreground), 0.08);
-  display: block;
-  height: calc(100% - 1.8rem);
-  content: '';
-  position: absolute;
-  right: 0;
+.template-search .grid__item--small:not(:last-child) {
+    padding-bottom: 0.5rem;
 }
 
-.search__button:focus-visible,
-.reset__button:focus-visible {
-  background-color: rgb(var(--color-background));
-  z-index: 4;
+@media screen and (min-width: 750px) {
+    .template-search__header {
+        margin-bottom: 5rem;
+    }
+
+    .template-search .grid__item--small:not(:last-child) {
+        padding-bottom: 1rem;
+    }
 }
 
-.search__button:focus,
-.reset__button:focus {
-  background-color: rgb(var(--color-background));
-  z-index: 4;
+.search__button svg {
+    height: 1.8rem;
+    width: auto;
 }
 
-.search__button:not(:focus-visible):not(.focused),
-.reset__button:not(:focus-visible):not(.focused) {
-  box-shadow: inherit;
-  background-color: inherit;
+.search-results {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
 }
 
-.search__button:hover .icon,
-.reset__button:hover .icon {
-  transform: scale(1.07);
+@media screen and (min-width: 768px) {
+    .search-results  {
+      grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-
-.search__button .icon {
-  height: 1.8rem;
-  width: 1.8rem;
+@media screen and (min-width: 992px) {
+    .search-results  {
+      grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-.reset__button .icon.icon-close {
-  height: 1.8rem;
-  width: 1.8rem;
-  stroke-width: 0.1rem;
+.page-wrapper {
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-decoration: none;
 }
 
-/* Remove extra spacing for search inputs in Safari */
-input::-webkit-search-decoration {
-  -webkit-appearance: none;
+.page {
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.page--text-only {
+    display: flex;
+    justify-content: center;
+}
+
+.page.page--soft {
+    background-color: rgba(var(--color-primary-rgb),.04);
+    color: rgb(var(--color-secondary));
+}
+
+.page--text-only .page__inner {
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    width: 100%;
+}
+
+.page__content {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.page--text-only .page__content {
+    grid-row: 2;
+    justify-self: flex-start;
+    margin-bottom: 6rem;
+    margin-top: 5rem;
+}
+
+@media screen and (min-width: 750px) {
+    .page--text-only .page__content {
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+    }
+}
+
+.page__content>* {
+    margin: 0;
+}
+
+.page__text {
+    margin: 0;
+    word-break: break-word;
+}
+
+.page__badge {
+    bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    left: 1rem;
+    position: absolute;
+}
+
+.page--text-only .page__badge {
+    align-self: flex-end;
+    grid-row: 3;
+}
+
+.page--search .page__badge, .page--text-only .page__badge {
+    position: initial;
+}
+
+.page--text-only .page__content+.page__badge {
+    margin-top: -5rem;
+}
+
+@media screen and (min-width: 750px) {
+    .page--text-only .page__content+.page__badge {
+        margin-top: -7rem;
+    }
+}
+
+.badge {
+    border: 1px solid transparent;
+    border-radius: 4rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    line-height: 1;
+    padding: 0.6rem 1.3rem;
+    text-align: center;
+    background-color: rgb(var(--color-neutral-rgb));
+    border-color: rgba(var(--color-secondary-rgb), var(--color-primary-rgb));
+    color: rgb(var(--color-primary-rgb));
+    word-break: break-word;
+}
+
+.page__badge>* {
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.page--search .page__badge>*, .page--text-only .page__badge>* {
+    margin: 0 1.2rem 1.2rem;
 }

@@ -1,0 +1,24 @@
+.wrapper{
+    height: fit-content;
+    text-align: center;
+    position: relative;
+    
+}
+
+.wrapper h1{
+  margin-bottom:10px;
+}
+
+.wrapper button{
+  background-color:transparent;
+  border: 1px black solid;
+  color:black;
+  padding:10px 15px;
+  cursor:pointer;
+  transition: all 0.3s ease;
+  margin-bottom:5rem;
+}
+.wrapper button:hover{
+  background-color:black;
+  color:white;
+}

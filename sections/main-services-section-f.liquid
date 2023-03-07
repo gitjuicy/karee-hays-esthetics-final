@@ -1,0 +1,31 @@
+{{ 'component-main-services.css' | asset_url | stylesheet_tag }}
+
+<div class="container">
+  <div class="mt-8 mb-8 row">
+    <a class="button" href="{{ section.settings.buttonLink }}" style="width: auto; margin: 0 auto">{{ section.settings.buttonText }}</a>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Facials, Section F",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "buttonLink",
+        "label": "Button Link"
+      }, {
+        "type": "text",
+        "id": "buttonText",
+        "label": "Button Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Section F",
+        "category": "Button"
+      }
+    ]
+  }
+{% endschema %}

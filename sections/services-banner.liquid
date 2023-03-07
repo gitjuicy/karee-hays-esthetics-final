@@ -1,0 +1,58 @@
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+<div class="collection-banner" style="max-height: 50vh;">
+  <div class="p-0">
+    <!-- Start Heading -->
+    <div class="relative">
+      <div class="media" style="padding-bottom: 50%; position: relative;">
+        {% if section.settings.banner_image != blank %}
+          <img style="max-height: 50vh; object-position: 50% 25%;" src="{{ section.settings.banner_image | img_url: '1300x' }}">
+        {% endif %}
+        <div class="servicesTitle">
+          <h1 class="my-0 p-5 col-12 {{ section.settings.alignment }}">
+            {{ page.title }}
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- End Heading -->
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Services Banner",
+    "tag": "section",
+    "class": "services-banner",
+    "settings": [
+      {
+        "type": "select",
+        "id": "alignment",
+        "label": "Title alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      }, {
+        "type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Services Banner",
+        "category": "Images"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,94 @@
+{{ 'section-main-services.css' | asset_url | stylesheet_tag }}
+
+<!-- Start Heading -->
+<div class="d-block relative heading">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 center">
+                <h1 class="mt-8 mb-8 uppercase">{{ page.title }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Heading -->
+
+<div class="container">
+  <!-- Start Discovery Areas -->
+  {% if section.blocks.size > 0 %}
+      <div class="row">
+          {% for block in section.blocks %}
+              <div class="discovery-area col-lg-4">
+                  {% render 'object-image', path: block.settings.area_img, alt: block.settings.area_title %}
+                  <div class="discover-text">
+                      <h3 class="uppercase">{{ block.settings.area_title  }}</h3>
+                      <p>{{ block.settings.area_desc  }}</p>
+                      <a href="{{ block.settings.area_url  }}" class="link link--text uppercase">
+                          {{ block.settings.area_link_text }}
+                      </a>
+                  </div>
+              </div>
+          {% endfor %}
+      </div>
+  {% endif %}
+  <!-- End Discovery Areas -->
+</div>
+
+{% schema %}
+{
+    "name": "Discover",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "sub_title",
+            "label": "Sub Title",
+            "default": "Discover"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Karee Hays Esthetics"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Areas",
+            "type": "area",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "area_img",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "area_title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "area_desc",
+                    "label": "Description"
+                },
+                {
+                    "type": "text",
+                    "id": "area_link_text",
+                    "label": "Link Text",
+                    "default": "Learn More"
+                },
+                {
+                    "type": "url",
+                    "id": "area_url",
+                    "label": "Link"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

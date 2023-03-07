@@ -1,0 +1,110 @@
+{{ 'component-main-services.css' | asset_url | stylesheet_tag }}
+
+<div class="container">
+  <h3>BROWSE MORE OF OUR SERVICES</h3>
+  <div class="services-section-l row">
+    <div class="services-section-l-row col-md-4 co-sm-12">
+      {% if section.settings.img_left != blank %}
+        <img src="{{ section.settings.img_left | image_url }}" alt="Left Image">
+      {% endif %}
+      <h3>{{ section.settings.title_left }}</h3>
+      <p>{{ section.settings.description_left }}</p>
+      <a class="button" href="{{ section.settings.buttonLink_left }}">{{ section.settings.buttonTextLeft }}</a>
+    </div>
+    <div class="services-section-l-row col-md-4 co-sm-12">
+      {% if section.settings.img_middle != blank %}
+        <img src="{{ section.settings.img_middle | image_url }}" alt="Middle Image">
+      {% endif %}
+      <h3>{{ section.settings.title_middle }}</h3>
+      <p>{{ section.settings.description_middle }}</p>
+      <a class="button" href="{{ section.settings.buttonLink_middle }}">{{ section.settings.buttonTextMiddle }}</a>
+    </div>
+    <div class="services-section-l-row col-md-4 co-sm-12">
+      {% if section.settings.img_right != blank %}
+        <img src="{{ section.settings.img_right | image_url }}" alt="Right Image">
+      {% endif %}
+      <h3>{{ section.settings.title_right }}</h3>
+      <p>{{ section.settings.description_middle }}</p>
+      <a class="button" href="{{ section.settings.buttonLink_right }}">{{ section.settings.buttonTextRight }}</a>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Facials, Section L",
+    "tag": "section",
+    "class": "spaced-section services-section-l-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img_left",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "title_left",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "description_left",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "buttonLink_left",
+        "label": "Button Link"
+      }, {
+        "type": "text",
+        "id": "buttonTextLeft",
+        "label": "Left Button Text"
+      }, {
+        "type": "image_picker",
+        "id": "img_middle",
+        "label": "Image"
+      }, {
+        "type": "text",
+        "id": "title_middle",
+        "label": "Title"
+      }, {
+        "type": "textarea",
+        "id": "description_middle",
+        "label": "Description"
+      }, {
+        "type": "text",
+        "id": "buttonLink_middle",
+        "label": "Button Link"
+      }, {
+        "type": "text",
+        "id": "buttonTextMiddle",
+        "label": "Middle Button Text"
+      }, {
+        "type": "image_picker",
+        "id": "img_right",
+        "label": "Image"
+      }, {
+        "type": "text",
+        "id": "title_right",
+        "label": "Title"
+      }, {
+        "type": "textarea",
+        "id": "description_right",
+        "label": "Description"
+      }, {
+        "type": "text",
+        "id": "buttonLink_right",
+        "label": "Button Link"
+      }, {
+        "type": "text",
+        "id": "buttonTextRight",
+        "label": "Right Button Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Section L",
+        "category": "Text and Image"
+      }
+    ]
+  }
+{% endschema %}

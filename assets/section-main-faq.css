@@ -1,0 +1,18 @@
+.faqs h2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: rgba(var(--color-secondary-rgb), .015);
+}
+
+.faqs h2 svg {
+    width: 2rem;
+    height: auto;
+    transition: all var(--duration-short) ease;
+}
+
+.faqs h2.open svg {
+    transform: rotate(45deg);
+}

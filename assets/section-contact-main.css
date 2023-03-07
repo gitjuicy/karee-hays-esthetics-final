@@ -1,0 +1,127 @@
+.contact-main {
+  padding: 0 0 5rem 0;
+  background-color: rgba(var(--color-secondary-rgb), 0.015);
+  font-family: var(--font-heading-family);
+}
+
+.contact-main .contact-top {
+  /* border-bottom: 20px solid rgba(var(--color-secondary-rgb), 0.015); */
+  box-shadow: 0px -3px 18px rgba(0, 0, 0, 0.16);
+}
+
+.contact-main .container-fluid {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.contact-main a {
+  text-decoration: none;
+}
+
+.contact-phone-email-vircon-col {
+  /* background: var(--color-light); */
+  background-color: white;
+}
+
+.contact-phone-email-vircon-col h1 {
+  font-size: 3rem;
+}
+
+.contact-phone-email-vircon-col h2 {
+  /* font-size: 1.5rem;
+  font-weight: 700; */
+}
+
+.contact-phone-email-vircon-col p {
+  /* font-size: 1.5rem; */
+}
+
+.contact-phone-email-vircon-col a {
+  text-decoration: underline;
+}
+
+.contact-grid-item {
+  background: var(--color-light);
+  border: 5px solid white;
+  padding: 2rem 2rem 2rem 2rem;
+}
+.font-body-family {
+  font-family: var(--font-body-family);
+}
+.location {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-top: 0rem;
+  border-bottom: 0.1rem solid rgba(var(--color-secondary-rgb), 0.15);
+}
+
+.working-hours {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-top: 0rem;
+}
+
+.contact-loc-hrs-col {
+  background: var(--color-light);
+}
+
+/* Contact Form */
+
+.contact-form-row {
+  display: block;
+  margin: 5rem auto 0 auto;
+}
+
+.form-status {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.form__message .form-status {
+  align-items: center;
+}
+
+.form-status svg {
+  margin-right: 1rem;
+  height: auto;
+}
+
+.form-status.success svg {
+  width: 4rem;
+}
+
+.form-status.error svg {
+  width: 3rem;
+}
+
+.contact .form__message {
+  align-items: flex-start;
+}
+
+.contact .field {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact .field {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact__button {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact__fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

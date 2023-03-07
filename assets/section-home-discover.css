@@ -1,0 +1,52 @@
+.discovery-area {
+    position: relative;
+}
+
+@media screen and ( max-width: 992px ) {
+    .discovery-area {
+        margin-bottom: 3rem;
+    }
+}
+
+.highlight {
+    border-radius: 1.2rem;
+    box-shadow: 5px 5px 8px rgba(var(--color-primary-rgb), .25);
+}
+
+.highlight .media {
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+}
+
+.discover-text h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.discover-text p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.discover-text .link {
+    font-weight: 300;
+    letter-spacing: 0.9px;
+}
+
+.highlight .discover-text .link {
+    padding: 1rem 1.5rem 1rem;
+    border-bottom: .3rem solid rgba(var(--color-secondary-rgb), .25);
+    transition: all var(--duration-short) ease;
+}
+
+.highlight .discover-text .link:hover,
+.highlight .discover-text .link:focus {
+    border-bottom: .3rem solid rgba(var(--color-secondary-rgb), 1);
+}
+
+
+@media screen and (min-width: 992px) {
+    .padding {
+        padding: 5rem;
+    }
+}

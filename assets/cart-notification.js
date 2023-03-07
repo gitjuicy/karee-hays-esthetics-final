@@ -1,79 +1,115 @@
-class CartNotification extends HTMLElement {
-  constructor() {
-    super();
+const cartCounter = document.querySelector('[data-cart-counter]')
+const cartNotification = document.getElementById('cart-notification')
+const cartTotalPrice = document.querySelector('[data-total-price]')
+const cartNotificationHeading = document.querySelector('.cart-notification__heading span')
 
-    this.notification = document.getElementById('cart-notification');
-    this.header = document.querySelector('sticky-header');
-    this.onBodyClick = this.handleBodyClick.bind(this);
+// Close Cart Notifications
+const closeCartNotification = document.querySelector('.cart-notification__close')
+closeCartNotification.addEventListener('click', () => {
+    if(cartNotification.classList.contains('active')) {
+        cartNotification.classList.remove('active')
+    }   
+})
+ 
+// Remove Cart Line Item
+const getRemoveItemBtn = document.querySelectorAll('[data-remove-item]')
+getRemoveItemBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        let id = btn.dataset.key
+        let qty = 0
 
-    this.notification.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
-    this.querySelectorAll('button[type="button"]').forEach((closeButton) =>
-      closeButton.addEventListener('click', this.close.bind(this))
-    );
-  }
+        changeCartQty(id,qty)
+        
+        // Remove line item
+        btn.parentElement.parentElement.classList.add('hidden')
+        cartNotificationHeading.innerText = "Item removed from your cart"
+    })
+});
 
-  open() {
-    this.notification.classList.add('animate', 'active');
+// Quantity Buttons Click
+const cartQtyBtns = document.querySelectorAll('.cart-notification-form__quantity .quantity__button')
+cartQtyBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Plus Button
+        if(btn.getAttribute("name") === "plus") {
+            const input = btn.previousElementSibling
+            let number = parseInt(input.value)
+            input.value = number + 1;
+            let qty = input.value
+            let id = btn.dataset.key
+            changeCartQty(id,qty)
+            cartNotificationHeading.innerText = "Item added to your cart"
+        }
 
-    this.notification.addEventListener('transitionend', () => {
-      this.notification.focus();
-      trapFocus(this.notification);
-    }, { once: true });
+        // Minus Button
+        if(btn.getAttribute("name") === "minus") {
+            const input = btn.nextElementSibling;
+            let number = parseInt(input.value);
+            input.value = number - 1;
+            let qty = input.value
+            let id = btn.dataset.key
 
-    document.body.addEventListener('click', this.onBodyClick);
-  }
+            changeCartQty(id,qty)
+            cartNotificationHeading.innerText = "Item removed from your cart"
+            
+            if(input.value <= 0) {
+                input.value = 0
+                const lineItemContainer = document.querySelector('[data-key-id="'+ id +'"]')
+                if ( lineItemContainer.classList.contains('hidden') === false ) {
+                    lineItemContainer.classList.add('hidden')
+                }
+            }
+        }
+    })
+});
 
-  close() {
-    this.notification.classList.remove('active');
-    document.body.removeEventListener('click', this.onBodyClick);
+// Change cart value - AJAX
+function changeCartQty(key,quantity) {
 
-    removeTrapFocus(this.activeElement);
-  }
+    fetch('/cart/change.js', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            'id': key,
+            'quantity': quantity
+        })
+    })
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
 
-  renderContents(parsedState) {
-      this.cartItemKey = parsedState.key;
-      this.getSectionsToRender().forEach((section => {
-        document.getElementById(section.id).innerHTML =
-          this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
-      }));
+        // Get line item
+        const lineItem = document.querySelector('[data-key-id="'+ key +'"]')
+        const lineItemPriceContainer = lineItem.querySelector('.cart-notification-product__price')
+        
+        // Find line item new price
+        const foundItem = data.items.find((item) => {
+            return item.key === key
+        })
 
-      if (this.header) this.header.reveal();
-      this.open();
-  }
+        if ( foundItem != undefined ) {
+            const newLinePrice = foundItem.final_line_price / 100
+            const newLinePriceCurrency = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(newLinePrice)
+            lineItemPriceContainer.innerHTML = newLinePriceCurrency
+        }
 
-  getSectionsToRender() {
-    return [
-      {
-        id: 'cart-notification-product',
-        selector: `[id="cart-notification-product-${this.cartItemKey}"]`,
-      },
-      {
-        id: 'cart-notification-button'
-      },
-      {
-        id: 'cart-icon-bubble'
-      }
-    ];
-  }
+        // Update all Cart Counts
+        cartCounter.innerText = data.item_count;
 
-  getSectionInnerHTML(html, selector = '.shopify-section') {
-    return new DOMParser()
-      .parseFromString(html, 'text/html')
-      .querySelector(selector).innerHTML;
-  }
+        // Update total price
+        const price = data.total_price / 100
+        const totalPrice = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(price)
+        
+        if(cartTotalPrice != null) {
+            cartTotalPrice.innerHTML = totalPrice
+        }
 
-  handleBodyClick(evt) {
-    const target = evt.target;
-    if (target !== this.notification && !target.closest('cart-notification')) {
-      const disclosure = target.closest('details-disclosure, header-menu');
-      this.activeElement = disclosure ? disclosure.querySelector('summary') : null;
-      this.close();
-    }
-  }
-
-  setActiveElement(element) {
-    this.activeElement = element;
-  }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 }
-
-customElements.define('cart-notification', CartNotification);

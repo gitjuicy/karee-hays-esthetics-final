@@ -1,0 +1,11 @@
+{% assign images = product.media | where: "media_type", "image" %}
+
+<div class="swiper product-slider">
+  <div class="swiper-wrapper">
+    {% for image in images %}
+      <div class="swiper-slide">
+        {% render 'object-image', path: image.src %}
+      </div><!-- end .swiper-slide -->
+    {% endfor %}
+  </div><!-- end .swiper-wrapper -->
+</div><!-- end .swiper -->

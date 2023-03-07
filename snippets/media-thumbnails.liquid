@@ -1,0 +1,24 @@
+{% assign thumbnails = product.media | where: "media_type", "image" %}
+
+{% comment %}
+<div class="swiper thumbnail-slider">
+  <div class="swiper-wrapper">
+    {% for thumbnail in thumbnails %}
+      <div class="swiper-slide">
+        <img src="{{  thumbnail | img_url: "160x160", crop: "center"}}" alt="{{ product.title }}">
+      </div><!-- end .swiper-slide -->
+    {% endfor %}
+  </div><!-- end .swiper-wrapper -->
+
+  <!--div class="swiper-pagination"></div-->
+  
+</div><!-- end .swiper -->
+{% endcomment %}
+
+<div class="product-thumbnails">
+  {% for thumbnail in thumbnails %}
+    <div class="product-thumbnail">
+      <img src="{{  thumbnail | img_url: "320x320"}}" alt="{{ product.title }}" />
+    </div>
+  {% endfor %}  
+</div>

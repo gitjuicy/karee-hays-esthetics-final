@@ -1,0 +1,78 @@
+{{ 'section-main-staff.css' | asset_url | stylesheet_tag }}
+
+<!-- Start Heading -->
+{% comment %} <div class="d-block relative heading">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 center">
+                <h1 class="mt-8 mb-8 uppercase">{{ page.title }}</h1>
+
+                {% if collection.description != blank %}
+                    <div class="mb-8 rte center">
+                        {{ page.content }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div> {% endcomment %}
+<!-- End Heading -->
+
+<!-- Start Staff -->
+{% if section.blocks.size > 0 %}
+    <div class="container">
+        <div class="staff-team">
+            {% for block in section.blocks %}
+                {% if block.type == 'team-member' %}
+                    <article>
+                        {% render 'object-image', path: block.settings.image, alt: block.settings.title %}
+                        <h2 class="h4 capitalize mb-0">
+                            {{ block.settings.name }}
+                        </h2>
+                        <h3 class="h5 capitalize mt-2">
+                            {{ block.settings.title }}
+                        </h3>
+                    </article>
+                {% endif %}
+            {% endfor %}
+        </div><!-- end .press-items -->
+    </div>
+{% endif %}
+<!-- End Staff -->
+
+<div class="container center mb-5">
+    <a href="https://www.maxwellaesthetics.com/plastic-surgery-nashville/jacob-g-unger-md/" target="_blank" class="h4 mb-5 capitalize full-unstyled-link">
+        Medical Director: Dr. Jacob Unger, M.D. →
+    </a>
+</div>
+
+{% schema %}
+{
+    "name": "Staff",
+    "tag": "section",
+    "class": "staff",
+    "blocks": [
+        {
+           "name": "Team Member",
+           "type": "team-member",
+           "settings": [
+               {
+                   "type": "text",
+                   "id": "name",
+                   "label": "Name"
+               },
+               {
+                   "type": "text",
+                   "id": "title",
+                   "label": "Title"
+               },
+               {
+                   "type": "image_picker",
+                   "id": "image",
+                   "label": "Image"
+               }
+           ]
+        }
+    ]
+}
+{% endschema %}

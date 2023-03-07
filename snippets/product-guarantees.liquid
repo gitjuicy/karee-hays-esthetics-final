@@ -1,0 +1,11 @@
+{% if section.blocks.size > 0 %}
+    <ul class="product__guarantees list-unstyled d-flex">
+        {% for block in section.blocks %}
+            {% if block.type == 'guarantee' %}
+                <li class="px-2 relative">
+                    {% render 'object-image', path: block.settings.g_img, alt: block.settings.g_text %}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endif %}

@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        {% if section.blocks.size > 0 %}
+            {% for block in section.blocks %}
+                {% if block.type == "info" %}
+                    <div class="col-lg-3 col-md-6 center">
+                        <div class="product__info-box">
+                            <div class="product__info-icon">
+                                {% render 'object-image', path: block.settings.icon %}
+                            </div>
+                            <h2 class="h5 uppercase">{{ block.settings.title }}</h2>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Product Info",
+    "tag": "section",
+    "class": "spaced-section product__info",
+    "max_blocks": 4,
+    "blocks": [
+        {
+            "name": "Info Box",
+            "type": "info",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "Icon"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

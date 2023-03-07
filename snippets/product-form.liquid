@@ -1,0 +1,82 @@
+{{ 'custom-select.css' | asset_url | stylesheet_tag }}
+
+{% form 'product', product %}
+    <!-- Start Product Variants -->
+    {%- unless product.has_only_default_variant -%}
+    <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+        {%- for option in product.options_with_values -%}
+          <div class="product-form__input product-form__input--dropdown">
+            <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+              {{ option.name }}
+            </label>
+            <div class="select custom-select">
+              <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                class="select__select"
+                name="options[{{ option.name | escape }}]"
+                form="product-form-{{ section.id }}"
+              >
+                {%- for value in option.values -%}
+                  <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                    {{ value }}
+                  </option>
+                {%- endfor -%}
+              </select>
+              {% render 'svg-icon-caret' %}
+            </div>
+          </div>
+        {%- endfor -%}
+    </variant-selects>
+    {%- endunless -%}
+
+    <input type="hidden" id="variant-id" name="id" value="{{ product.variants.first.id }}">
+    <!-- End Product Variants -->
+
+    <!-- Start Quantity Selector -->
+    {%- if product.selected_or_first_available_variant.available -%}
+    <div class="product-form__input product-form__quantity">
+        <label class="form__label" for="Quantity-{{ section.id }}">
+            Quantity
+        </label>
+        <quantity-input class="quantity">
+            <button class="quantity__button" name="minus" type="button">
+                <span class="visually-hidden">Decrease quantity of {{ product.title }}</span>
+                {% render 'svg-icon-minus' %}
+            </button>
+            <input class="quantity__input"
+                type="number"
+                name="quantity"
+                id="Quantity-{{ section.id }}"
+                min="1"
+                value="1"
+                form="product-form-{{ section.id }}"
+            >
+            <button class="quantity__button" name="plus" type="button">
+                <span class="visually-hidden">Increase quantity of {{ product.title }}</span>
+                {% render 'svg-icon-plus' %}
+            </button>
+        </quantity-input>
+    </div>
+    {% endif %}
+    <!-- End Quantity Selector -->
+
+    <!-- Start Form Buttons -->
+    <div class="product-form__input product-form__buttons">
+        <button
+            type="submit"
+            name="add"
+            class="product-form__submit button button-reverse uppercase"
+            {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+        >
+            <span>
+                {%- if product.selected_or_first_available_variant.available -%}
+                Add to cart
+                {%- else -%}
+                Sold out
+                {%- endif -%}
+            </span>
+        </button>
+    </div>
+    <!-- End Form Buttons -->
+{% endform %}
+
+<script src="{{ 'custom-select.js' | asset_url }}"></script>

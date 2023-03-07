@@ -1,0 +1,69 @@
+{{ 'section-home-quote.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.quote_img %}
+    <div class="relative px-0 overlay bg-image" style="background-image: url('{{ section.settings.quote_img | img_url: '1400x' | prepend: 'https:' }}');">
+        <div class="row justify-content-center quote-wrapper">
+            <div class="col-12">
+                <figure>
+                    <blockquote class="blockquote">
+                        <p>"{{ section.settings.quote }}"</p>
+                    </blockquote>
+                    {% comment %}
+                    <figcaption class="blockquote-footer">
+                        <cite title="{{ section.settings.author }}">{{ section.settings.author }}</cite>
+                    </figcaption>
+                    {% endcomment %}
+                </figure>
+                {% comment %}
+                <a href="{{ section.settings.btn_link }}" class="button button-reverse">
+                    {{ section.settings.btn_text }}
+                </a>
+                {% endcomment %}
+            </div>
+        </div>
+
+    </div>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Quote",
+    "tag": "section",
+    "class": "quote-section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "quote_img",
+            "label": "Background Image"
+        },
+        {
+            "type": "textarea",
+            "id": "quote",
+            "label": "Quote",
+            "default": "Imperfections are beautiful, all you need is a little GLOW"
+        },
+        {
+            "type": "text",
+            "id": "author",
+            "label": "Author",
+            "default": "KH"
+        },
+        {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button Text",
+            "default": "Treat yourself today"
+        },
+        {
+            "type": "url",
+            "id": "btn_link",
+            "label": "Button Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Quote"
+        }
+    ]
+}
+{% endschema %}

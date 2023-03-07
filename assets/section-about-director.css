@@ -1,0 +1,9 @@
+@media screen and ( min-width: 992px ) {
+    .director .media {
+        padding: 0.25rem;
+        background-color: var(--color-neutral);
+        border: 1px solid rgba(var(--color-primary-rgb), .15);
+        border-radius: 0.25rem;
+        box-shadow: 0 .5rem 1rem rgba(var(--color-primary-rgb), .15);
+    }
+}

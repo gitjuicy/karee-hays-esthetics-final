@@ -1,0 +1,116 @@
+{{ 'section-hero-slider.css' | asset_url | stylesheet_tag }}
+
+{% if section.blocks.size > 0 %}
+  <div class="swiper home-slider">
+      <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+              {% if block.type == 'slide' %}
+                  <div class="swiper-slide">
+                      {% render 'object-image', path: block.settings.slide_img, alt: block.settings.title %}
+                      {% liquid
+                          assign alignment = block.settings.alignment
+                          case alignment
+                              when "left"
+                                  assign align = "left"
+                              when "right"
+                                  assign align = "right"
+                              else
+                                  assign align = "center"
+                          endcase
+                      %}
+                      <div class="swiper-text">
+                          <h1>{{ block.settings.title }}</h1>
+                          <p>{{ block.settings.desc }}</p>
+                          <button class="button" onclick="window.location='{{ block.settings.btn_link }}';">{{ block.settings.btn_text }}</button>
+                      </div>
+                  </div>
+              {% endif %}
+          {% endfor %}
+      </div>
+  </div>
+{% endif %}
+
+{% javascript %}
+    var swiper = new Swiper(".home-slider", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 10000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+{% endjavascript %}
+
+{% schema %}
+{
+    "name": "Slider",
+    "tag": "section",
+    "class": "spaced-section spaced-section--full-width home-slider",
+    "blocks": [
+        {
+            "name": "Slides",
+            "type": "slide",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "slide_img",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Karee Hays Esthetics"
+                },
+                {
+                    "type": "textarea",
+                    "id": "desc",
+                    "label": "Description",
+                    "default": "The ultimate daily skincare practices to achieve clear, radiant skin"
+                },
+                {
+                    "type": "text",
+                    "id": "btn_text",
+                    "label": "Button Text",
+                    "default": "Discover More"
+                },
+                {
+                    "type": "url",
+                    "id": "btn_link",
+                    "label": "Button Link"
+                },
+                {
+                    "type": "select",
+                    "id": "alignment",
+                    "label": "Slider text alignment",
+                    "options": [
+                        {
+                            "value": "left",
+                            "label": "Left"
+                        },
+                        {
+                            "value": "center",
+                            "label": "Center"
+                        },
+                        {
+                            "value": "right",
+                            "label": "Right"
+                        }
+                    ],
+                    "default": "left"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+      "name": "Slider",
+      "category": "Images"
+      }
+    ]
+}
+{% endschema %}

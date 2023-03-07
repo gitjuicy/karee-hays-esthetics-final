@@ -1,0 +1,128 @@
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+{{ 'section-contact-main.css' | asset_url | stylesheet_tag }}
+
+{% comment %} {% include 'page-heading' %} {% endcomment %}
+
+<div class="container-fluid">
+    <div class="row contact-top">
+        <!-- Start Col 1 -->
+        <div class="col-lg-6 contact-phone-email-vircon-col">
+          <h1 class="center mt-8">{{ page.title }}</h1>
+          <div class="p-5">
+              <!-- Start Email / Phone / VirtConf -->
+              <div class="rte row justify-content-center">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12 center justify-content-center contact-grid-item">
+                  <div style="width:42px; height:42px; margin: 0 auto 20px auto; opacity:0.3;">{% render 'object-image', path: section.settings.email_icon, alt: section.settings.email_title, resize: true %}</div>
+                  <h2 class="h4">{{ section.settings.email_title }}</h2>
+                  <span class="font-body-family">{{ section.settings.email_desc }}</span>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12 center justify-content-center contact-grid-item">
+                  <div style="width:42px; height=42px; margin: 0 auto 20px auto; opacity:0.3;">{% render 'object-image', path: section.settings.vircon_icon, alt: section.settings.vircon_title, resize: true %}</div>
+                  <h2 class="h4">{{ section.settings.vircon_title }}</h2>
+                  <span class="font-body-family">{{ section.settings.vircon_desc }}</span>
+                </div>
+              </div>
+              <!-- End Email / Phone / VirtConf -->
+          </div>
+        </div>
+        <!-- End Col 1 -->
+
+        <!-- Start Col 2-->
+        <div class="col-lg-6 p-5 contact-loc-hrs-col">
+            <div class="p-2">
+
+                <!-- Start Location and Working Hours -->
+                <div class="row location justify-content-center">
+                  <div class="col-12 center">
+                      <h2 class="uppercase mt-0 h4">{{ section.settings.loc_title }}</h2>
+                      <div class="rte font-body-family">
+                          {{ section.settings.loc_desc }}
+                      </div>
+                  </div>
+                </div>
+                <div class="row working-hours justify-content-center">
+                  <div class="col-12 center">
+                      <h2 class="uppercase mt-5 mt-md-0 h4">{{ section.settings.hours_title }}</h2>
+                      <div class="rte font-body-family">
+                          {{ section.settings.hours_desc }}
+                      </div>
+                  </div>
+                </div>
+                <!-- End Location and Working Hours -->
+            </div>
+        </div>
+        <!-- End Col 2-->
+
+    </div>
+    <div class="row">
+      <!-- Start Contact Form -->
+      <div class="col-md-8 col-lg-6 col-sm-9 col-12 contact-form-row p-5">
+        {% render 'contact-form' %}
+      </div>
+      <!-- End Contact Form -->
+    </div>
+</div><!-- end .container-fluid -->
+
+{% schema %}
+  {
+    "name": "Content",
+    "tag": "section",
+    "class": "contact-main",
+    "settings": [
+      {
+      "type": "image_picker",
+      "id": "email_icon",
+      "label": "Email Icon"
+      },
+      {
+      "type": "text",
+      "id": "email_title",
+      "label": "Email Title",
+      "default": "Email"
+      },
+      {
+      "type": "richtext",
+      "id": "email_desc",
+      "label": "Email Description"
+      },
+      {
+      "type": "image_picker",
+      "id": "vircon_icon",
+      "label": "Virtual Consultation Icon"
+      },
+      {
+      "type": "text",
+      "id": "vircon_title",
+      "label": "Virtual Consultation Title",
+      "default": "Virtual Consultation"
+      },
+      {
+      "type": "richtext",
+      "id": "vircon_desc",
+      "label": "Virtual Consultation Description"
+      },
+      {
+      "type": "text",
+      "id": "loc_title",
+      "label": "Location Title",
+      "default": "Location"
+      },
+      {
+      "type": "richtext",
+      "id": "loc_desc",
+      "label": "Location Description"
+      },
+      {
+      "type": "text",
+      "id": "hours_title",
+      "label": "Hours Title",
+      "default": "Working Hours"
+      },
+      {
+      "type": "richtext",
+      "id": "hours_desc",
+      "label": "Hours Description"
+      }
+    ]
+  }
+{% endschema %}

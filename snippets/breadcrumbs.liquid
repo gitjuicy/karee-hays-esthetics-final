@@ -1,0 +1,36 @@
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li>
+                <a href="{{ routes.root_url }}" class="full-unstyled-link">Home</a>
+            </li>
+            {% if request.page_type == 'page' %}
+                <li>
+                    {{ page.title }}
+                </li>
+            {% endif %}
+            {% if request.page_type == 'product' %}
+                <li>
+                    <a href="{{ product.collections[0].url }}" class="full-unstyled-link">{{ product.collections[0].title }}</a>
+                </li>
+                <li>
+                    {{ product.title }}
+                </li>
+            {% endif %}
+            {% if request.page_type == 'blog' %}
+                {% if current_tags %}
+                    <li>
+                        <a href="{{ blog.url }}" class="full-unstyled-link">{{ blog.title }}</a>
+                    </li>
+                    <li>
+                      {{ current_tags.first }}
+                    </li>
+                {% else %}
+                    <li>
+                        {{ blog.title }}
+                    </li>
+                {% endif %}
+            {% endif %}
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,89 @@
+{{ 'component-main-services.css' | asset_url | stylesheet_tag }}
+
+<div class="container">
+
+  <!-- Start Section E -->
+  <div class="services-section-e row">
+    <div class="section-e-left col-md-6 col-sm-12">
+      {% if section.settings.img_left != blank %}
+        <img src="{{ section.settings.img_left | image_url }}" alt="Left Image">
+      {% endif %}
+      <h3>{{ section.settings.title_left }}</h3>
+      <p>{{ section.settings.description_left }}</p>
+      {% if section.settings.buttonLinkLeft and section.settings.buttonTextLeft != blank %}
+        <a class="button" href="{{ section.settings.buttonLinkLeft }}">{{ section.settings.buttonTextLeft }}</a>
+      {% endif %}
+    </div>
+    <div class="section-e-right col-md-6 col-sm-12">
+      {% if section.settings.img_right != blank %}
+        <img src="{{ section.settings.img_right | image_url }}" alt="Right Image">
+      {% endif %}
+      <h3>{{ section.settings.title_right }}</h3>
+      <p>{{ section.settings.description_right }}</p>
+      {% if section.settings.buttonLinkRight and section.settings.buttonTextRight != blank %}
+        <a class="button" href="{{ section.settings.buttonLinkRight }}">{{ section.settings.buttonTextRight }}</a>
+      {% endif %}
+    </div>
+  </div>
+  <!-- End Section E -->
+</div>
+
+{% schema %}
+  {
+    "name": "Facials, Section E",
+    "tag": "section",
+    "class": "spaced-section services-section-e-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img_left",
+        "label": "Left Image"
+      },
+      {
+        "type": "text",
+        "id": "title_left",
+        "label": "Left Title"
+      },
+      {
+        "type": "textarea",
+        "id": "description_left",
+        "label": "Left Description"
+      },
+      {
+        "type": "text",
+        "id": "buttonLinkLeft",
+        "label": "Left Button Link"
+      }, {
+        "type": "text",
+        "id": "buttonTextLeft",
+        "label": "Left Button Text"
+      }, {
+        "type": "image_picker",
+        "id": "img_right",
+        "label": "Right Image"
+      }, {
+        "type": "text",
+        "id": "title_right",
+        "label": "Right Title"
+      }, {
+        "type": "textarea",
+        "id": "description_right",
+        "label": "Right Description"
+      }, {
+        "type": "text",
+        "id": "buttonLinkRight",
+        "label": "Right Button Link"
+      }, {
+        "type": "text",
+        "id": "buttonTextRight",
+        "label": "Right Button Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Section E",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

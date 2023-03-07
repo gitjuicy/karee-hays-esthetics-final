@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        {% if section.blocks.size > 0 %}
+            {% for block in section.blocks %}
+                <div class="col-lg-4">
+                    <h1 class="h4 uppercase">{{ block.settings.title }}</h1>
+                    <div class="product__notes rte">
+                        {{ block.settings.desc }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Product Notes",
+    "tag": "section",
+    "class": "spaced-section",
+    "max_blocks": 3,
+    "blocks": [
+        {
+            "name": "Notes",
+            "type": "notes",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "desc",
+                    "label": "Description"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

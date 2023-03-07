@@ -1,0 +1,26 @@
+{{ 'section-contact-map.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.embed_map %}
+    <div class="container-fluid px-0">
+        <div class="row">
+            <div class="col-12">
+                {{section.settings.embed_map}}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Map",
+    "tag": "section",
+    "class": "embed-map",
+    "settings": [
+        {
+            "type": "html",
+            "id": "embed_map",
+            "label": "Embed Map"
+        }
+    ]
+}
+{% endschema %}

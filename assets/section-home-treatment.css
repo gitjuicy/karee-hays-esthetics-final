@@ -1,0 +1,13 @@
+.treatment-areas.row > * {
+    padding-top: calc(var(--bs-gutter-x) * .75);
+    padding-bottom: calc(var(--bs-gutter-x) * .75);
+}
+
+.treatment-areas a {
+    position: relative;
+}
+
+.treatment-areas a h3 {
+    position: relative;
+    text-transform: uppercase;
+}

@@ -1,0 +1,92 @@
+.discovery-area {
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+@media screen and ( max-width: 992px ) {
+    .discovery-area {
+        margin-bottom: 3rem;
+    }
+}
+
+.highlight {
+    border-radius: 1.2rem;
+    box-shadow: 5px 5px 8px rgba(var(--color-primary-rgb), .25);
+}
+
+.highlight .media {
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+}
+
+.discover-text h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.discover-text p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.discover-text .link {
+    font-weight: 300;
+    letter-spacing: 0.9px;
+}
+
+.highlight .discover-text .link {
+    padding: 1rem 1.5rem 1rem;
+    border-bottom: .3rem solid rgba(var(--color-secondary-rgb), .25);
+    transition: all var(--duration-short) ease;
+}
+
+.highlight .discover-text .link:hover,
+.highlight .discover-text .link:focus {
+    border-bottom: .3rem solid rgba(var(--color-secondary-rgb), 1);
+}
+
+
+@media screen and (min-width: 992px) {
+    .padding {
+        padding: 5rem;
+    }
+}
+
+/* .service:last-child {
+    margin-bottom: 5rem;
+}
+
+.service-areas h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: rgba(var(--color-secondary-rgb), .05);
+}
+
+.service-areas h3 svg {
+    width: 2rem;
+    height: auto;
+    transition: all var(--duration-default) ease;
+}
+
+.service-areas h3.open svg {
+    transform: rotate(180deg);
+}
+
+.service-desc {
+    padding: 4rem;
+}
+
+.bg-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 992px) {
+    .bg-image {
+        min-height: 30rem;
+    }
+} */

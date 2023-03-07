@@ -1,0 +1,69 @@
+<div class="product__accordion my-4 rte">
+    <!-- Start Benefits Accordion -->
+    {% liquid
+        assign benefits_title = product.metafields.accordion.benefits_title.value
+        assign benefits_desc = product.metafields.accordion.benefits_description.value
+    %}
+    {% if benefits_title != blank and benefits_desc != blank %}
+        <button type="button" class="button-reset d-flex align-items-center">
+            {% render 'svg-icon-plus' %}
+            <h3 class="uppercase ms-2 h4">{{ benefits_title }}</h3>
+        </button>
+
+        <div class="accordion__description rte">
+            {{ benefits_desc }}
+        </div>
+    {% endif %}
+    <!-- End Benefits Accordion -->
+
+    <!-- Start Usage Section -->
+    {% liquid
+        assign usage_title = product.metafields.accordion.usage_title.value
+        assign usage_desc = product.metafields.accordion.usage_description.value
+    %}
+    {% if usage_title != blank and usage_desc != blank %}
+        <button type="button" class="button-reset d-flex align-items-center">
+            {% render 'svg-icon-plus' %}
+            <h3 class="uppercase ms-2 h4">{{ usage_title }}</h3>
+        </button>
+
+        <div class="accordion__description rte">
+            {{ usage_desc }}
+        </div>
+    {% endif %}
+    <!-- End Usage Section -->
+
+    <!-- Start Ingredients Section -->
+    {% liquid
+        assign igrdts_title = product.metafields.accordion.ingredients_title.value
+        assign igrdts_desc = product.metafields.accordion.ingredients_description.value
+    %}
+    {% if igrdts_title != blank and igrdts_desc != blank %}
+        <button type="button" class="button-reset d-flex align-items-center">
+            {% render 'svg-icon-plus' %}
+            <h3 class="uppercase ms-2 h4">{{ igrdts_title }}</h3>
+        </button>
+
+        <div class="accordion__description rte">
+            {{ igrdts_desc }}
+        </div>
+    {% endif %}
+    <!-- End Ingredients Section -->
+
+    <!-- Start Notes Section -->
+    {% liquid
+        assign notes_title = product.metafields.accordion.notes_title.value
+        assign notes_desc = product.metafields.accordion.notes_description.value
+    %}
+    {% if notes_title != blank and notes_desc != blank %}
+        <button type="button" class="button-reset d-flex align-items-center">
+            {% render 'svg-icon-plus' %}
+            <h3 class="uppercase ms-2 h4">{{ notes_title }}</h3>
+        </button>
+
+        <div class="accordion__description rte">
+            {{ notes_desc }}
+        </div>
+    {% endif %}
+    <!-- End Notes Section -->
+</div>

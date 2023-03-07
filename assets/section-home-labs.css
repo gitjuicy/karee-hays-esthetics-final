@@ -1,0 +1,18 @@
+.home-labs .link {
+    font-weight: 300;
+    letter-spacing: 0.9px;
+    text-transform: capitalize;
+    border-bottom: .3rem solid rgba(var(--color-secondary-rgb), .25);
+    transition: all var(--duration-short) ease;
+}
+
+.home-labs .link:hover,
+.home-labs .link:focus {
+    border-bottom: .3rem solid rgba(var(--color-secondary-rgb), 1);
+}
+
+@media screen and (min-width: 992px) {
+    .home-labs .card-wrapper h2 {
+        min-height: 4rem;
+    }
+}

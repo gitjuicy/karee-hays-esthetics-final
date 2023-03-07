@@ -1,0 +1,57 @@
+{{ 'section-about-director.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'main-doc.js' | asset_url }}" defer="defer"></script>
+
+
+<div id="doctor" class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    {% render 'object-image', path: section.settings.doctor %}
+                </div>
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                    <div class="rte">
+                        <h2>{{ section.settings.title }}</h2>
+                        <h3>{{ section.settings.subtitle }}</h3>
+                        {{ section.settings.desc }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% schema %}
+{
+    "name": "Director",
+    "tag": "section",
+    "class": "spaced-section director relative",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Medical Director"
+        },
+        {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Sub Title",
+            "default": "About Dr. Jacob Unger, M.D."
+        },
+        {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+        },
+        {
+            "type": "image_picker",
+            "id": "doctor",
+            "label": "Doctor's Image"
+        }
+    ]
+}
+{% endschema %}

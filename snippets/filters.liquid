@@ -1,0 +1,70 @@
+<form class="filter-form">
+    <!-- Start Active Filters -->
+    <div class="active-filters">
+        <h4 class="uppercase">Refine by</h4>
+
+        <ul class="active-filters__chosen">
+            {%- for filter in collection.filters -%}
+                {% unless filter.type == "price_range" %}
+                    {%- for filter_value in filter.active_values -%}
+                        <li>
+                            <a class="" href="{{ filter_value.url_to_remove }}">
+                                {{ filter_value.label }}
+                                {% render 'svg-icon-close' %}
+                            </a>
+                        </li>
+                    {%- endfor -%}
+                {% endunless %}
+            {%- endfor -%}
+        </ul>
+
+        <a href="{{ collection.url }}" class="active-filters__clear">Clear all</a>
+
+    </div>
+    <!-- End Active Filters -->
+
+    {% for filter in collection.filters %}
+        
+        <!-- Start Filter Section Header -->
+        <button type="button" class="filter-section-header button-reset">
+            <h4 class="uppercase">
+                {{ filter.label }} 
+                {%- if filter.active_values.size > 0 -%}
+                    <span>({{ filter.active_values.size }})</span>  
+                {%- endif -%}
+            </h4>
+            {%- if filter.active_values.size > 0 -%}
+                <a href="{{ filter.url_to_remove }}" class="full-unstyled-link">Clear</a>
+            {%- endif -%}
+
+            {% render 'svg-icon-plus' %}
+            {% render 'svg-icon-minus' %}
+        </button>
+        <!-- End Filter Section Header -->
+        
+        <!-- Start Filter Section Body -->
+        <div class="filter-section-body">
+            {%- case filter.type -%}
+                {%- when 'list' -%}
+                    {%- for filter_value in filter.values -%}
+                    {%- if filter_value.count == 0 and filter_value.active == false -%}<div class="not-available">{%- endif %}
+                        <label class="filter-wrapper ">{{ filter_value.label }}
+                            <input type="checkbox"
+                            name="{{ filter_value.param_name }}"
+                            value="{{ filter_value.value }}"
+                            id="Filter-{{ filter.label }}-{{ forloop.index }}"
+                            {%- if filter_value.active -%}checked{%- endif -%}
+                            {%- if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>
+                            <span class="checkmark"></span>
+                        </label>
+                    {%- if filter_value.count == 0 and filter_value.active == false -%}</div>{%- endif %}
+                    {%- endfor -%}
+                    
+                {%- when 'price_range' -%}
+            {%- endcase -%}
+        </div>
+        <!-- End Filter Section Body -->
+
+    {% endfor %}
+    
+</form>

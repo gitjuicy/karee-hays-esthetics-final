@@ -1,61 +1,66 @@
 .collection-list {
-  margin-top: 0;
-  margin-bottom: 0;
+    position: relative;
+
 }
 
-.collection-list-title {
-  margin: 0;
+.collection-list.row > * {
+    padding-top: calc(var(--bs-gutter-x) * .5);
+    padding-bottom: calc(var(--bs-gutter-x) * .5);
 }
 
-@media screen and (max-width: 749px) {
-  .collection-list:not(.slider) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .section-collection-list .page-width {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .section-collection-list .collection-list:not(.slider) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+.card {
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    border: .1rem solid rgba(var(--color-secondary-rgb),.04);
 }
 
-.collection-list__item:only-child {
-  max-width: 100%;
-  width: 100%;
+.card--media {
+    position: relative;    
+    height: 100%;
+    color: rgba(var(--color-secondary-rgb),.75);
+    background-color: transparent;
 }
 
-@media screen and (max-width: 749px) {
-  .slider.collection-list--1-items {
-    padding-bottom: 0;
-  }
+.card--media .media {
+    max-height: 35rem;
+    min-height: 35rem;
 }
 
-@media screen and (min-width: 750px) and (max-width: 989px) {
-  .slider.collection-list--1-items,
-  .slider.collection-list--2-items,
-  .slider.collection-list--3-items,
-  .slider.collection-list--4-items {
-    padding-bottom: 0;
-  }
+@media screen and (min-width: 990px) {
+    .card .card--media .media>img:only-child {
+        transition: transform var(--duration-long) ease;
+    } 
+}
+
+@media screen and (min-width: 990px) {
+    .card:hover .card--media .media>img:only-child {
+        transform: scale(1.03);
+    } 
+}
+
+.card--text {
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    word-break: break-word;
+    background-color: rgba(var(--color-secondary-rgb),.04);
 }
 
 @media screen and (min-width: 750px) {
-  .collection-list__item a:hover {
-    box-shadow: none;
-  }
+    .card--text {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
 }
 
-@media screen and (max-width: 989px) {
-  .collection-list.slider .collection-list__item {
-    max-width: 100%;
-  }
+.animate-arrow .icon-arrow path {
+    transform: translateX(-.25rem);
+    transition: transform var(--duration-short) ease;
 }
 
-.collection-list-view-all {
-  margin-top: 2rem;
+.animate-arrow:hover .bi-arrow-right path {
+    transform: translateX(0rem);
 }

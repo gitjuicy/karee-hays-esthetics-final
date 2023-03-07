@@ -1,0 +1,72 @@
+{{ 'section-home-press.css' | asset_url | stylesheet_tag }}
+
+<div class="press-container">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <!-- Start Heading Section -->
+      {% if section.settings.title != empty %}
+        <div class="row justify-content-center">
+            <div class="col-lg-10 center">
+                <h2 class="uppercase mt-0">{{ section.settings.title }}</h2>
+            </div>
+        </div>
+      {% endif %}
+      <!-- End Heading Section -->
+
+      {% if section.blocks.size > 0 %}
+        <!-- Start Press Items -->
+          <div class="row justyify-content-center press-items">
+              {% for block in section.blocks %}
+                  {% if block.type == 'press-item' %}
+                      {% liquid
+                          assign block_size = block.settings.press_item_width
+                          assign press_img = block.settings.press_image
+                      %}
+                      <div class="col-md-{{ block_size }} col-4">
+                          {% render 'object-image', path: press_img %}
+                      </div>
+                  {% endif %}
+              {% endfor %}
+          </div><!-- end .press-items -->
+        <!-- End Press Items -->
+      {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Press",
+    "tag": "section",
+    "class": "spaced-section--full-width home-press",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Featured In"
+        }
+    ],
+    "blocks": [
+        {
+           "name": "Press Item",
+           "type": "press-item",
+           "settings": [
+               {
+                   "type": "image_picker",
+                   "id": "press_image",
+                   "label": "Press image"
+               },
+               {
+                   "type": "range",
+                   "id": "press_item_width",
+                   "min": 1,
+                   "max": 12,
+                   "step": 1,
+                   "default": 2,
+                   "label": "Press image width",
+                   "info": "The press row is composed of a 12 column grid. The number chosen here is the width of this column"
+               }
+           ]
+        }
+    ]
+}
+{% endschema %}

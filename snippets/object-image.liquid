@@ -1,0 +1,32 @@
+{%- liquid
+    if path and path != blank
+        assign src = path
+    endif
+
+    if alt and alt != blank
+        assign alt_text = alt
+    endif
+
+    if resize and resize != blank
+        assign resize = 100
+    else 
+        assign resize = 1 | divided_by: src.aspect_ratio | times: 100
+    endif
+%}
+<div class="media" style="padding-bottom: {{ resize }}%;">
+    <img
+        srcset="{%- if src.width >= 750 -%}{{ src | img_url: '750x' }} 750w,{%- endif -%}
+        {%- if src.width >= 1100 -%}{{ src | img_url: '1100x' }} 1100w,{%- endif -%}
+        {%- if src.width >= 1500 -%}{{ src | img_url: '1500x' }} 1500w,{%- endif -%}
+        {%- if src.width >= 1780 -%}{{ src | img_url: '1780x' }} 1780w,{%- endif -%}
+        {%- if src.width >= 2000 -%}{{ src | img_url: '2000x' }} 2000w,{%- endif -%}
+        {%- if src.width >= 3000 -%}{{ src | img_url: '3000x' }} 3000w,{%- endif -%}
+        {%- if src.width >= 3840 -%}{{ src | img_url: '3840x' }} 3840w,{%- endif -%}"
+        sizes="(max-width: 400px) 750vw, 1100vw"
+        src="{{ src | img_url: '1100x' }}"
+        loading="lazy"
+        alt="{{ alt_text | default: src.alt | escape }}"
+        width="{{ src.width }}"
+        height="{{ src.width | divided_by: src.aspect_ratio }}"
+    >
+</div>

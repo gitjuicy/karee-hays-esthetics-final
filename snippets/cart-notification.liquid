@@ -1,58 +1,138 @@
-{% comment %}
-  Renders cart notification
-
-  Accepts:
-  - color_scheme: {String} sets the color scheme of the notification (optional)
-  - desktop_menu_type: {String} passes the desktop menu type which allows us to use the right css class (optional)
-
-  Usage:
-  {% render 'cart-notification' %}
-{% endcomment %}
-
 <cart-notification>
-  <div class="cart-notification-wrapper{% if desktop_menu_type != 'drawer' %} page-width{% endif %}">
-    <div
-      id="cart-notification"
-      class="cart-notification focus-inset{% if color_scheme %} color-{{ color_scheme }} gradient{% endif %}"
-      aria-modal="true"
-      aria-label="{{ 'general.cart.item_added' | t }}"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div class="cart-notification__header">
-        <h2 class="cart-notification__heading caption-large text-body">
-          {%- render 'icon-checkmark' -%}
-          {{ 'general.cart.item_added' | t }}
-        </h2>
-        <button
-          type="button"
-          class="cart-notification__close modal__close-button link link--text focus-inset"
-          aria-label="{{ 'accessibility.close' | t }}"
-        >
-          <svg class="icon icon-close" aria-hidden="true" focusable="false">
-            <use href="#icon-close">
-          </svg>
-        </button>
-      </div>
-      <div id="cart-notification-product" class="cart-notification-product"></div>
-      <div class="cart-notification__links">
-        <a
-          href="{{ routes.cart_url }}"
-          id="cart-notification-button"
-          class="button button--secondary button--full-width"
-        >{{ 'general.cart.view_empty_cart' | t }}</a>
-        <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
-          <button class="button button--primary button--full-width" name="checkout">
-            {{ 'sections.cart.checkout' | t }}
-          </button>
-        </form>
-        <button type="button" class="link button-label">{{ 'general.continue_shopping' | t }}</button>
-      </div>
+    <div class="cart-notification-wrapper">
+        <div id="cart-notification" class="cart-notification container focus-inset" aria-modal="true" aria-label="Item added to your cart" role="dialog" tabindex="-1">
+            <!-- Start Cart Notification Header -->
+            <div class="cart-notification__header row g-0">
+                <div class="col-10">
+                    <h2 class="cart-notification__heading caption-large text-body d-flex align-items-center">
+                        {%- render 'svg-icon-checkmark' -%}  <span>Item added to your cart</span>
+                    </h2>
+                </div>
+                <div class="col-2 right">
+                    <button type="button" class="cart-notification__close modal__close-button button-reset focus-inset" aria-label="Close">
+                        {% render 'svg-icon-close' %}
+                    </button>
+                </div>
+            </div>
+            <!-- End Cart Notification Header -->
+
+            <!-- Start Cart Notification Products -->
+            <div id="cart-notification-product" class="cart-notification-product">
+                <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+                    
+                        <div id="cart-items-wrapper">
+                        {%- for item in cart.items -%}
+                            <!-- Start Cart Notification Item -->
+                            <div class="cart-item row g-0 mb-5" data-key-id="{{ item.key }}" data-variant-id="{{ item.id }}">
+                                {% if item.image %}
+                                    <div class="col-3 pe-3">
+                                        <img class="cart-notification-product__image"
+                                        src="{{ item.image | img_url: '140x' }}"
+                                        alt="{{ item.image.alt | escape }}"
+                                        width="70"
+                                        height="{{ 70 | divided_by: item.image.aspect_ratio | ceil }}"
+                                        loading="lazy"
+                                        >
+                                    </div>
+                                {% endif %}
+
+                                <div class="cart-notification-product__info ps-3 col-8">
+                                    <!-- Start Cart Item Info -->
+                                    <div class="row g-0">
+                                        <div class="col-12">
+                                            <h3 class="cart-notification-product__name h4 mt-0">{{ item.product.title | escape }}</h3>
+                                            {%- unless item.product.has_only_default_variant -%}
+                                                {%- for option in item.options_with_values -%}
+                                                    <div class="cart-notification-product__option h4">
+                                                        <dt>{{ option.name }}: </dt>
+                                                        <dd>{{ option.value }}</dd>
+                                                    </div>
+                                                {%- endfor -%}
+                                            {%- endunless -%}
+                                        </div>
+                                    </div>
+                                    <!-- End Cart Item Info -->
+
+                                    <!-- Start Quantity Selector -->
+                                    <div class="row my-4">
+                                        <div class="col-12">
+                                            <div class="cart-notification-form__quantity">
+                                                <label class="form__label visually-hidden" for="Quantity-{{ item.id }}">
+                                                    Quantity
+                                                </label>
+                                                <quantity-input class="quantity">
+                                                    <button class="quantity__button" name="minus" type="button" data-key="{{ item.key }}">
+                                                        <span class="visually-hidden">Decrease quantity of {{ item.product.title }}</span>
+                                                        {% render 'svg-icon-minus' %}
+                                                    </button>
+                                                    <input class="quantity__input"
+                                                        type="number"
+                                                        name="quantity"
+                                                        id="Quantity-{{ item.id }}"
+                                                        min="1"
+                                                        value="{{ item.quantity }}"
+                                                    >
+                                                    <button class="quantity__button" name="plus" type="button" data-key="{{ item.key }}">
+                                                        <span class="visually-hidden">Increase quantity of {{ item.product.title }}</span>
+                                                        {% render 'svg-icon-plus' %}
+                                                    </button>
+                                                </quantity-input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Quantity Selector -->
+
+                                    <!-- Start Cart Item Price -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="m-0 cart-notification-product__price h4">
+                                                {{ item.final_price | money }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- End Cart Item Price -->
+                                </div>
+                                <div class="cart-notification-product__del col-1 right">
+                                    <button type="button" class="cart-item__remove button-reset focus-inset" aria-label="Remove" data-remove-item data-key="{{ item.key }}">
+                                        {% render 'svg-icon-delete' %}
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- End Cart Notification Item -->
+                        {% endfor %}
+                        </div><!-- end #cart-items-wrapper -->
+                        
+                        <!-- Start Cart Notification Total and Shipping -->
+                        <div class="row g-0 cart-notification-product__cost">
+                            <div class="col-5">
+                                <h4 class="m-0">subtotal</h4>
+                            </div>
+                            <div class="col-7 right">
+                                <span data-total-price>
+                                    {{ cart.total_price | money }}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row g-0 cart-notification-product__cost">
+                            <div class="col-5">
+                                <h4 class="m-0">tax & shipping</h4>
+                            </div>
+                            <div class="col-7 right">calculated at checkout</div>
+                        </div>
+                        <!-- End Cart Notification Total and Shipping -->
+
+                        <!-- Start Checkout Button -->
+                        <div class="row g-0 mt-5">
+                            <div class="col-12">
+                                <button type="submit" class="button button--full-width" name="checkout">Checkout</button>
+                            </div>
+                        </div>
+                        <!-- End Checkout Button -->
+                    
+                </form>
+            </div>
+            <!-- End Cart Notification Products -->
+
+        </div>
     </div>
-  </div>
 </cart-notification>
-{% style %}
-  .cart-notification {
-    display: none;
-  }
-{% endstyle %}

@@ -1,0 +1,8 @@
+.embed-map {
+    border-top: .1rem solid rgba(var(--color-primary-rgb), .55);;
+}
+
+.embed-map iframe {
+    width: 100%;
+    height: 45rem;
+}

@@ -1,0 +1,119 @@
+{{ 'section-home-discover.css' | asset_url | stylesheet_tag }}
+
+<div class="container">
+    <!-- Start Heading Section -->
+    <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-10 center">
+            <h1 class="h3 uppercase mt-0">{{ section.settings.sub_title }}</h1>
+            <h2 class="h2 uppercase mt-0">{{ section.settings.title }}</h2>
+            <p class="mt-0 mb-5">{{ section.settings.description }}</p>
+        </div>
+    </div>
+    <!-- End Heading Section -->
+
+    <!-- Start Discovery Areas -->
+    <div class="row mt-5">
+        <div class="col-md-6 col-12">
+          <div class="discovery-area col-12">
+              {% render 'object-image', path: section.settings.main_area_img, alt: section.settings.main_area_title %}
+          </div>
+        </div>
+        <div class="col-md-6 col-12">
+            {% if section.blocks.size > 0 %}
+                <div class="row">
+                    {% for block in section.blocks %}
+                        <div class="discovery-area col-md-6 col-12 mb-5">
+                            {% render 'object-image', path: block.settings.area_img, alt: block.settings.area_title %}
+                            <div class="discover-text">
+                                <h3 class="uppercase">{{ block.settings.area_title  }}</h3>
+                                <p>{{ block.settings.area_desc  }}</p>
+                                <a href="{{ block.settings.area_url  }}" class="link link--text uppercase">
+                                    {{ block.settings.area_link_text }}
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <!-- End Discovery Areas -->
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Discover",
+    "tag": "section",
+    "class": "spaced-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "sub_title",
+            "label": "Sub Title",
+            "default": "Discover"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Karee Hays Esthetics"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description"
+        },
+        {
+            "type": "image_picker",
+            "id": "main_area_img",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "main_area_title",
+            "label": "Title"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Areas",
+            "type": "area",
+            "limit": 4,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "area_img",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "area_title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "area_desc",
+                    "label": "Description"
+                },
+                {
+                    "type": "text",
+                    "id": "area_link_text",
+                    "label": "Link Text",
+                    "default": "Learn More"
+                },
+                {
+                    "type": "url",
+                    "id": "area_url",
+                    "label": "Link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+       "name": "Discover"
+      }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,31 @@
+.lab-heading {
+  /*padding: 5rem 0;
+    background-color: rgba(var(--color-secondary-rgb), .1);*/
+}
+
+.intro-lab {
+  padding-bottom: 5rem;
+}
+
+.main-lab .media {
+  box-shadow: 0 0.5rem 1rem rgba(var(--color-primary-rgb), 0.15);
+}
+
+@media screen and (min-width: 992px) {
+  .main-lab h1 {
+    text-align: center;
+  }
+}
+
+.lab-images {
+  display: grid;
+  grid-gap: 1rem;
+  margin-top: 5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 992px) {
+  .lab-images {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

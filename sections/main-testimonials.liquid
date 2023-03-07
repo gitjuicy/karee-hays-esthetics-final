@@ -1,0 +1,86 @@
+{{ 'section-main-testimonials.css' | asset_url | stylesheet_tag }}
+
+<!-- Start Heading -->
+<div class="d-block relative heading">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 center">
+                <h1 class="mt-8 mb-8 uppercase">{{ page.title }}</h1>
+
+                {% if page.content  %}
+                    <div class="mb-8 rte center">
+                        {{ page.content }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Heading -->
+
+<!-- Start Testimonials -->
+{% if section.blocks.size > 0 %}
+    <div class="container">
+        <div class="testimonial-items">
+            {% for block in section.blocks %}
+                {% if block.type == 'testimonial' %}
+                    <article>
+                        <header>
+                            <div class="media-wrapper">
+                                {% render 'object-image', path: block.settings.image, alt: block.settings.title %}
+                            </div>
+                            <div class="bio">
+                                <h2 class="h4 uppercase mt-0 mb-0">
+                                    {{ block.settings.name }}
+                                </h2>
+                                <h3 class="h4 capitalize mt-2">
+                                    {{ block.settings.title }}
+                                </h3>
+                            </div>
+                        </header>
+                        <div class="rte d-block">
+                            {{ block.settings.review }}
+                        </div>
+                    </article>
+                {% endif %}
+            {% endfor %}
+        </div><!-- end .press-items -->
+    </div>
+{% endif %}
+<!-- End Testimonials -->
+
+{% schema %}
+{
+    "name": "Testimonials",
+    "tag": "section",
+    "class": "testimonials",
+    "blocks": [
+        {
+           "name": "Testimonial",
+           "type": "testimonial",
+           "settings": [
+               {
+                   "type": "text",
+                   "id": "name",
+                   "label": "Name"
+               },
+               {
+                   "type": "text",
+                   "id": "title",
+                   "label": "Title"
+               },
+               {
+                   "type": "richtext",
+                   "id": "review",
+                   "label": "Review"
+               },
+               {
+                   "type": "image_picker",
+                   "id": "image",
+                   "label": "Image"
+               }
+           ]
+        }
+    ]
+}
+{% endschema %}

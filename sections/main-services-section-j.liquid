@@ -1,0 +1,66 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.filtering %}
+  {{ 'component-filters.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'component-filters.js' | asset_url }}" defer="defer"></script>
+{% endif %}
+
+<div class="services-section-j center container">
+  <h3>SOME PRODUCTS YOU MAY LIKE</h3>
+  {% assign collection = collections[section.settings.selected_collection] %}
+</div>
+
+<div class="container">
+    {%- if collection.products.size == 0 -%}
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="empty-collection">
+            <h1 class="h2">No products found!</h1>
+          </div>
+        </div>
+        {% render 'pagination', paginate: paginate, anchor: '' %}
+      </div>
+    {%- else -%}
+      <div class="row">
+
+        <!-- Start Products Section -->
+        <div class="{% if section.settings.filtering %}col-lg-9{% else %} col-12 {% endif %}">
+          <div class="row" data-id="{{ section.id }}">
+            {%- for product in collection.products -%}
+              <div class="col-6 col-lg-3">
+                {% render 'product-card', product_card_product: product %}
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+        <!-- End Products Section -->
+
+      </div>
+      <!-- end .row -->
+
+    {%- endif -%}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Collection Settings",
+    "tag": "section",
+    "class": "product-grid services-section-j spaced-section",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "selected_collection",
+        "label": "Collection"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection Settings",
+        "category": "Images"
+      }
+    ]
+  }
+{% endschema %}

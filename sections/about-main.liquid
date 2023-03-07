@@ -1,0 +1,92 @@
+{{ 'page-about.css' | asset_url | stylesheet_tag }}
+{{ 'component-breadcrumb.css' | asset_url | stylesheet_tag }}
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+
+{% comment %} {% include 'page-heading' %} {% endcomment %}
+
+<div class="container">
+
+    <!-- Start Intro -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="rte lab-desc">
+                {{ section.settings.intro }}
+            </div>
+        </div>
+    </div>
+    <!-- End Intro -->
+</div>
+
+{% if section.blocks.size > 0 %}
+    <div class="container">
+        <div class="about-images mb-8">
+            {% for block in section.blocks %}
+                {% if block.type == 'about-image' %}
+                    {% render 'object-image', path: block.settings.image, alt: section.settings.title, resize: true %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
+<div class="container">
+    <!-- Start Heading -->
+    <div class="row">
+        <div class="col-12">
+            <h2 class="uppercase mt-0 center">{{ section.settings.title }}</h2>
+        </div>
+    </div>
+    <!-- End Heading -->
+
+    <!-- Start Description -->
+    <div class="row justify-content-center mb-8">
+        <div class="col-lg-8">
+            <div class="rte lab-desc">
+                {{ section.settings.description }}
+            </div>
+        </div>
+    </div>
+    <!-- End Description -->
+</div>
+
+{% schema %}
+{
+  "name": "Content",
+  "tag": "section",
+  "class": "about-main",
+  "settings": [
+    {
+        "type": "text",
+        "id": "intro",
+        "label": "Intro",
+        "default": "Intro"
+    },
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "About Karee Hays"
+    },
+    {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description",
+        "default": "<p>Description</p>"
+    }
+  ],
+  "blocks": [
+        {
+            "name": "About Image",
+            "type": "about-image",
+            "limit": 4,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
