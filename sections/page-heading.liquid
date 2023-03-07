@@ -1,0 +1,173 @@
+{% if section.settings.header_img != blank %}
+
+<!-- Start Heading -->
+<div class="d-block relative heading">
+    <div class="container">
+        <div class="row justify-content-center" style="
+          background: 
+            {% if section.settings.header_bg_color == 'gray' %}
+              rgba(245,245,245,0.6)
+            {% endif %}
+            {% if section.settings.header_bg_color == 'black' %}
+              rgba(0,0,0,0.6)
+            {% endif %}
+            {% if section.settings.header_bg_color == 'white' %}
+              rgba(255,255,255,0.6)
+            {% endif %};
+          background-image: url('{{ section.settings.header_img | img_url: 'master' }}');
+          background-image:
+            {% if section.settings.header_bg_color == 'transparent' %}
+              linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0))
+            {% endif %}
+            {% if section.settings.header_bg_color == 'gray' %}
+              linear-gradient(rgba(245,245,245,0.{{ section.settings.header_bg_opacity }}), rgba(245,245,245,0.{{ section.settings.header_bg_opacity }}))
+            {% endif %}
+            {% if section.settings.header_bg_color == 'black' %}
+              linear-gradient(rgba(0,0,0,0.{{ section.settings.header_bg_opacity }}), rgba(0,0,0,0.{{ section.settings.header_bg_opacity }}))
+            {% endif %}
+            {% if section.settings.header_bg_color == 'white' %}
+              linear-gradient(rgba(255,255,255,0.{{ section.settings.header_bg_opacity }}), rgba(255,255,255,0.{{ section.settings.header_bg_opacity }}))
+            {% endif %}, url('{{ section.settings.header_img | img_url: 'master' }}');
+          background-position: 50% {{ section.settings.header_img_position_y }}%; 
+          background-size: cover;
+            ">
+            <div class="col-12 center">
+                <h1 class="mt-8 mb-8 px-4 uppercase {{ section.settings.header_text_position }}" style="
+                    color: {{ section.settings.header_text_color }};
+                    ">{{ page.title }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="d-block relative heading">
+    <div class="container">
+        <div class="row justify-content-center" style="
+          background-color: 
+            {% if section.settings.header_bg_color == 'transparent' %}
+              rgba(255,255,255,0)
+            {% endif %}
+            {% if section.settings.header_bg_color == 'gray' %}
+              rgba(245,245,245,1)
+            {% endif %}
+            {% if section.settings.header_bg_color == 'black' %}
+              rgba(0,0,0,1)
+            {% endif %}
+            {% if section.settings.header_bg_color == 'white' %}
+              rgba(255,255,255,1)
+            {% endif %};
+            
+            ">
+            <div class="col-12 center">
+                <h1 class="mt-8 mb-8 px-4 uppercase {{ section.settings.header_text_position }}" style="
+                    color: {{ section.settings.header_text_color }};
+                    ">{{ page.title }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+<!-- End Heading -->
+
+{% schema %}
+  {
+    "name": "Page Heading",
+    "tag": "section",
+    "class": "page-heading",
+    /*"templates": ["page", "contact"],*/
+    /*"limit": 1,*/
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "header_img",
+        "label": "Header Image"
+      },
+      {
+        "type": "range",
+        "id": "header_img_position_y",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Background Position (Y Axis)",
+        "default": 50
+      },
+      {
+        "type": "select",
+        "id": "header_bg_color",
+        "label": "Background Color",
+        "options": [
+          {
+            "value": "transparent",
+            "label": "Transparent"
+          },
+          {
+            "value": "gray",
+            "label": "Gray"
+          },
+          {
+            "value": "black",
+            "label": "Black"
+          },
+          {
+            "value": "white",
+            "label": "White"
+          }
+        ],
+        "default": "gray"
+      },
+      {
+        "type": "range",
+        "id": "header_bg_opacity",
+        "min": 10,
+        "max": 90,
+        "step": 10,
+        "unit": "%",
+        "label": "Background Color Strength (Image Required)",
+        "default": 60
+      },
+      {
+        "type": "select",
+        "id": "header_text_color",
+        "label": "Text Color",
+        "options": [
+          {
+            "value": "black",
+            "label": "Black"
+          },
+          {
+            "value": "white",
+            "label": "White"
+          }
+        ],
+        "default": "black"
+      },
+      {
+        "type": "select",
+        "id": "header_text_position",
+        "label": "Text Position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      }
+    ],
+    "presets": [
+      {
+      "name": "Page Heading",
+      "category": "Headings"
+      }
+    ]
+  }
+{% endschema %}
