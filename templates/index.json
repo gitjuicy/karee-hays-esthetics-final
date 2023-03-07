@@ -6,11 +6,11 @@
         "5786b4d7-787a-4f23-ae0c-2d4e151e1d98": {
           "type": "slide",
           "settings": {
-            "slide_img": "shopify://shop_images/15_0d6b2543-ffe1-4f1c-bc2f-e082c6f7ebc5.png",
+            "slide_img": "shopify:\/\/shop_images\/15_0d6b2543-ffe1-4f1c-bc2f-e082c6f7ebc5.png",
             "title": "Karee Hays Esthetics",
             "desc": "Ultimate daily skincare practices to achieve clear, radiant skin for you",
             "btn_text": "Learn More",
-            "btn_link": "shopify://pages/about",
+            "btn_link": "shopify:\/\/pages\/about",
             "alignment": "left"
           }
         },
@@ -18,7 +18,6 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "slide_img": "shopify://shop_images/7_9cd1465d-161c-4abb-b941-efcd51b4f4e2.png",
             "title": "Karee Hays Esthetics",
             "desc": "The ultimate daily skincare practices to achieve clear, radiant skin",
             "btn_text": "Discover More",
@@ -43,7 +42,8 @@
         "b9dd3e41-0213-472d-a5e0-d80bc30d6f05",
         "414ebd12-daa7-4f1f-bd75-9ab128bc7426"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "home_center_text": {
       "type": "center-text",
@@ -61,42 +61,42 @@
         "7453f724-97f0-42ec-8b36-03ef5bf6b3e7": {
           "type": "press-item",
           "settings": {
-            "press_image": "shopify://shop_images/glamour_31477a87-1c71-4de6-9baa-209f59c0d002.png",
+            "press_image": "shopify:\/\/shop_images\/glamour_31477a87-1c71-4de6-9baa-209f59c0d002.webp",
             "press_item_width": 2
           }
         },
         "7471fd89-2d4f-4db2-83ec-d058b4cc506d": {
           "type": "press-item",
           "settings": {
-            "press_image": "shopify://shop_images/goop.png",
+            "press_image": "shopify:\/\/shop_images\/goop.webp",
             "press_item_width": 2
           }
         },
         "726f00f6-c0c2-4767-ba4a-ba84f1c82c55": {
           "type": "press-item",
           "settings": {
-            "press_image": "shopify://shop_images/harpers-bazaar.png",
+            "press_image": "shopify:\/\/shop_images\/harpers-bazaar.webp",
             "press_item_width": 2
           }
         },
         "33d6b11a-33a6-452e-8a15-976e83c7a72e": {
           "type": "press-item",
           "settings": {
-            "press_image": "shopify://shop_images/haute-living.png",
+            "press_image": "shopify:\/\/shop_images\/haute-living.webp",
             "press_item_width": 2
           }
         },
         "d66519a5-0b30-42de-9bf2-6d926e2a9698": {
           "type": "press-item",
           "settings": {
-            "press_image": "shopify://shop_images/nashville-edit.png",
+            "press_image": "shopify:\/\/shop_images\/nashville-edit.webp",
             "press_item_width": 2
           }
         },
         "d86dd415-c54e-49cb-a9bb-3433537f19c8": {
           "type": "press-item",
           "settings": {
-            "press_image": "shopify://shop_images/us-weekly_ff27d7b7-6ede-40f6-9249-c4f511b293d6.png",
+            "press_image": "shopify:\/\/shop_images\/us-weekly_ff27d7b7-6ede-40f6-9249-c4f511b293d6.webp",
             "press_item_width": 2
           }
         }
@@ -124,14 +124,12 @@
     "943c0d0e-d49a-42d3-a86b-2d8dcdcb90bd": {
       "type": "main-collection-product-grid",
       "settings": {
-        "filtering": false,
-        "selected_collection": "facial-page"
+        "filtering": false
       }
     },
     "2bb778bc-a4ac-4117-882d-f6618e97ed45": {
       "type": "home-quote",
       "settings": {
-        "quote_img": "shopify://shop_images/45A0512.jpg",
         "quote": "Imperfections are beautiful, all you need is a little GLOW",
         "author": "KH",
         "btn_text": "",
@@ -155,12 +153,10 @@
       "type": "main-services-section-e",
       "disabled": true,
       "settings": {
-        "img_left": "shopify://shop_images/Screenshot_2023-01-11_at_12.31.12_PM.png",
         "title_left": "Skincare Professionals",
         "description_left": "Our experienced staff is licensed and educated to perform the latest advanced esthetic, cosmetic and laser treatments to enhance your natural Beauty.",
         "buttonLinkLeft": "#",
         "buttonTextLeft": "Request an Appointment",
-        "img_right": "shopify://shop_images/Screenshot_2023-01-11_at_12.31.12_PM.png",
         "title_right": "KH Skin Lab",
         "description_right": "In addition to in office skincare treatments, KH Esthetics offers Karee's signature collection of advanced medical grade products, KH Skin Lab.",
         "buttonLinkRight": "#",
