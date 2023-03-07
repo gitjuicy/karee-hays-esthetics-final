@@ -1,1 +1,79 @@
-{"sections":{"banner":{"type":"services-banner","settings":{"alignment":"center","banner_image":"shopify:\/\/shop_images\/6_7f09c8c7-04ce-4f09-9b9e-85ffd283cc90.png"}},"main":{"type":"main-services","settings":{}},"00c3ad75-b44f-44c7-8cc8-d041ba88aa46":{"type":"main-services-section-j","settings":{"filtering":true,"selected_collection":"treatment-add-ons"}},"4786db8e-a940-4a3d-b7c2-58728d30ff7e":{"type":"home-treatment","disabled":true,"blocks":{"1b1b76b0-cf32-464f-908b-f1d3adf2f02f":{"type":"treatment","settings":{"title":"","treatment_img":"shopify:\/\/shop_images\/20.png","page_link":""}},"7a805b2f-3e4b-44b0-9bd3-ea7021caea25":{"type":"treatment","settings":{"title":"","treatment_img":"shopify:\/\/shop_images\/18.png","page_link":""}},"c080bdd0-35dd-46ea-bc1d-1097a63455d8":{"type":"treatment","settings":{"title":"","treatment_img":"shopify:\/\/shop_images\/21.png","page_link":""}},"db6c39f7-b278-4d07-ba11-133f808a15cf":{"type":"treatment","settings":{"title":"","treatment_img":"shopify:\/\/shop_images\/19.png","page_link":""}}},"block_order":["1b1b76b0-cf32-464f-908b-f1d3adf2f02f","7a805b2f-3e4b-44b0-9bd3-ea7021caea25","c080bdd0-35dd-46ea-bc1d-1097a63455d8","db6c39f7-b278-4d07-ba11-133f808a15cf"],"settings":{"sub_title":"","title":"","description":""}},"d01487e2-7d68-45ae-b7f5-09a186d971a4":{"type":"main-services-section-j","disabled":true,"settings":{"filtering":false,"selected_collection":"test-jv-collectoin"}}},"order":["banner","main","00c3ad75-b44f-44c7-8cc8-d041ba88aa46","4786db8e-a940-4a3d-b7c2-58728d30ff7e","d01487e2-7d68-45ae-b7f5-09a186d971a4"]}
+{
+  "sections": {
+    "banner": {
+      "type": "services-banner",
+      "settings": {
+        "alignment": "center",
+        "banner_image": "shopify://shop_images/6_7f09c8c7-04ce-4f09-9b9e-85ffd283cc90.png"
+      }
+    },
+    "main": { "type": "main-services", "settings": {} },
+    "00c3ad75-b44f-44c7-8cc8-d041ba88aa46": {
+      "type": "main-services-section-j",
+      "settings": {
+        "filtering": true,
+        "selected_collection": "treatment-add-ons"
+      }
+    },
+    "4786db8e-a940-4a3d-b7c2-58728d30ff7e": {
+      "type": "home-treatment",
+      "disabled": true,
+      "blocks": {
+        "1b1b76b0-cf32-464f-908b-f1d3adf2f02f": {
+          "type": "treatment",
+          "settings": {
+            "title": "",
+            "treatment_img": "shopify://shop_images/20.png",
+            "page_link": ""
+          }
+        },
+        "7a805b2f-3e4b-44b0-9bd3-ea7021caea25": {
+          "type": "treatment",
+          "settings": {
+            "title": "",
+            "treatment_img": "shopify://shop_images/18.png",
+            "page_link": ""
+          }
+        },
+        "c080bdd0-35dd-46ea-bc1d-1097a63455d8": {
+          "type": "treatment",
+          "settings": {
+            "title": "",
+            "treatment_img": "shopify://shop_images/21.png",
+            "page_link": ""
+          }
+        },
+        "db6c39f7-b278-4d07-ba11-133f808a15cf": {
+          "type": "treatment",
+          "settings": {
+            "title": "",
+            "treatment_img": "shopify://shop_images/19.png",
+            "page_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1b1b76b0-cf32-464f-908b-f1d3adf2f02f",
+        "7a805b2f-3e4b-44b0-9bd3-ea7021caea25",
+        "c080bdd0-35dd-46ea-bc1d-1097a63455d8",
+        "db6c39f7-b278-4d07-ba11-133f808a15cf"
+      ],
+      "settings": { "sub_title": "", "title": "", "description": "" }
+    },
+    "d01487e2-7d68-45ae-b7f5-09a186d971a4": {
+      "type": "main-services-section-j",
+      "disabled": true,
+      "settings": {
+        "filtering": false,
+        "selected_collection": "test-jv-collectoin"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main",
+    "00c3ad75-b44f-44c7-8cc8-d041ba88aa46",
+    "4786db8e-a940-4a3d-b7c2-58728d30ff7e",
+    "d01487e2-7d68-45ae-b7f5-09a186d971a4"
+  ]
+}

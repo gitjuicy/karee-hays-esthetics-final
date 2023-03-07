@@ -1,0 +1,65 @@
+{{ 'section-main-press.css' | asset_url | stylesheet_tag }}
+
+<!-- Start Press Items -->
+{% if section.blocks.size > 0 %}
+    <div class="container">
+        <div class="press-items">
+            {% for block in section.blocks %}
+                {% if block.type == 'news-article' %}
+                    <article class="row">
+                        <div class="col-12 col-md-5">
+                            <a href="{{ block.settings.link }}" class="full-unstyled-link" target="_blank">
+                                <div class="press-image bg-image" style="background-image:url('{{ block.settings.image | img_url: '600x' | prepend: 'https:' }}')"></div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 offset-md-1">
+                            <h2 class="h4 uppercase mt-5">
+                                <a href="{{ block.settings.link }}" class="full-unstyled-link" target="_blank">
+                                    {{ block.settings.title }}
+                                </a>
+                            </h2>
+                            {{ block.settings.content }}
+                        </div>
+                    </article>
+                {% endif %}
+            {% endfor %}
+        </div><!-- end .press-items -->
+    </div>
+{% endif %}
+<!-- End Press Items -->
+
+{% schema %}
+{
+    "name": "In The Press",
+    "tag": "section",
+    "class": "press",
+    "blocks": [
+        {
+           "name": "Article",
+           "type": "news-article",
+           "settings": [
+               {
+                   "type": "text",
+                   "id": "title",
+                   "label": "Title"
+               },
+               {
+                   "type": "image_picker",
+                   "id": "image",
+                   "label": "Image"
+               },
+               {
+                   "type": "url",
+                   "id": "link",
+                   "label": "Link"
+               },
+               {
+                   "type": "richtext",
+                   "id": "content",
+                   "label": "Content"
+               }
+           ]
+        }
+    ]
+}
+{% endschema %}
