@@ -1,0 +1,53 @@
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+{{ 'component-breadcrumb.css' | asset_url | stylesheet_tag }}
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-blog-heading.css' | asset_url | stylesheet_tag }}
+
+{%- assign blog = blogs[section.settings.blog] -%}
+
+<!-- Start Heading -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 center">
+            <h1 class="mt-5 mb-5 center">{{ blog.title }}</h1>
+        </div>
+    </div>
+</div>
+<!-- End Heading -->
+
+<div class="container">
+  <div class="blog-articles">
+    {%- for article in blog.articles limit: 3 -%}
+      {% render 'article-card', article: article %}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Blog posts",
+  "class": "main-blog home-blog spaced-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Blog posts"
+    },
+    {
+      "id": "blog",
+      "type": "blog",
+      "label": "Blog"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog posts",
+      "category": "Blog",
+      "settings": {
+        "blog": "News"
+      }
+    }
+  ]
+}
+{% endschema %}
