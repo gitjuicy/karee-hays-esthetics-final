@@ -1,0 +1,41 @@
+{{ 'component-main-services.css' | asset_url | stylesheet_tag }}
+
+<div class="container">
+
+  <!-- Start Home Text Section -->
+  <div class="services-section-c">
+    <h3>{{ section.settings.title }}</h3>
+    <p>{{ section.settings.description }}</p>
+    <img src="{{ 'signature.png' | asset_url }}" alt="Karee Hays Signature" class="kh-signature" style="width: 250px; height: auto;">
+  </div>
+  <!-- End Home Text Section Section -->
+</div>
+
+{% schema %}
+  {
+    "name": "Home Text Section",
+    "tag": "section",
+    "class": "spaced-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description"
+      }, {
+        "type": "text",
+        "id": "buttonLink",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home Text Section",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,50 @@
+{{ 'component-main-services.css' | asset_url | stylesheet_tag }}
+
+<div class="container">
+
+  <!-- Start Home Text Columns -->
+  <div class="services-section-e row">
+    <div class="section-e-left col-6">
+      <h3>{{ section.settings.title_left }}</h3>
+      <p>{{ section.settings.description_left }}</p>
+    </div>
+    <div class="section-e-right col-6">
+      <h3>{{ section.settings.title_right }}</h3>
+      <p>{{ section.settings.description_right }}</p>
+    </div>
+  </div>
+  <!-- End Home Text Columns -->
+</div>
+
+{% schema %}
+  {
+    "name": "Home Text Columns",
+    "tag": "section",
+    "class": "spaced-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title_left",
+        "label": "Left Title"
+      }, {
+        "type": "textarea",
+        "id": "description_left",
+        "label": "Left Description"
+      }, {
+        "type": "text",
+        "id": "title_right",
+        "label": "Right Title"
+      }, {
+        "type": "textarea",
+        "id": "description_right",
+        "label": "Right Description"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home Text Columns",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}
