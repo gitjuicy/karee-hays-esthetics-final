@@ -1,1 +1,99 @@
-{"sections":{"banner":{"type":"services-banner","settings":{"alignment":"center","banner_image":"shopify:\/\/shop_images\/19_cd9e09e3-f2a3-4060-937c-c3cb628734b0.png"}},"main":{"type":"main-services","disabled":true,"settings":{"sub_title":"Discover","title":"Karee Hays Esthetics","description":""}},"5cd0548e-5dae-445d-bfef-55f215f498fd":{"type":"main-services-section-b","settings":{"title":"Chemical Peels","description":"At Karee Hays Esthetics, a wide variety of skin care concerns can be addressed by our medical estheticians with a custom chemical peel solution. Common skin conditions that can be treated with chemical peels include sun damage, acne, fine lines, wrinkles and discoloration. Our chemical peels can be customized depending on the desired results. The specialty topical acids used by our estheticians lift away dead cells and allow products maximum penetration and absorption, resulting in an even more radiant complexion. Chemical peels can be formulated for usage on various parts of the body including but not limited to the face, neck and chest, hands, arms and legs.","buttonLink":"","buttonText":""}},"ee145abf-6494-4733-9b47-f92a1849851b":{"type":"main-services-section-j","settings":{"filtering":true,"selected_collection":"chemical-peels"}},"4786db8e-a940-4a3d-b7c2-58728d30ff7e":{"type":"home-treatment","disabled":true,"blocks":{"1b1b76b0-cf32-464f-908b-f1d3adf2f02f":{"type":"treatment","settings":{"title":"","treatment_img":"shopify:\/\/shop_images\/20.png","page_link":""}},"7a805b2f-3e4b-44b0-9bd3-ea7021caea25":{"type":"treatment","settings":{"title":"","treatment_img":"shopify:\/\/shop_images\/18.png","page_link":""}},"c080bdd0-35dd-46ea-bc1d-1097a63455d8":{"type":"treatment","settings":{"title":"","treatment_img":"shopify:\/\/shop_images\/21.png","page_link":""}},"db6c39f7-b278-4d07-ba11-133f808a15cf":{"type":"treatment","settings":{"title":"","treatment_img":"shopify:\/\/shop_images\/19.png","page_link":""}}},"block_order":["1b1b76b0-cf32-464f-908b-f1d3adf2f02f","7a805b2f-3e4b-44b0-9bd3-ea7021caea25","c080bdd0-35dd-46ea-bc1d-1097a63455d8","db6c39f7-b278-4d07-ba11-133f808a15cf"],"settings":{"sub_title":"","title":"","description":""}},"d01487e2-7d68-45ae-b7f5-09a186d971a4":{"type":"main-services-section-j","disabled":true,"settings":{"filtering":false,"selected_collection":"test-jv-collectoin"}}},"order":["banner","main","5cd0548e-5dae-445d-bfef-55f215f498fd","ee145abf-6494-4733-9b47-f92a1849851b","4786db8e-a940-4a3d-b7c2-58728d30ff7e","d01487e2-7d68-45ae-b7f5-09a186d971a4"]}
+{
+  "sections": {
+    "banner": {
+      "type": "services-banner",
+      "settings": {
+        "alignment": "center",
+        "banner_image": "shopify:\/\/shop_images\/19_cd9e09e3-f2a3-4060-937c-c3cb628734b0.png"
+      }
+    },
+    "main": {
+      "type": "main-services",
+      "disabled": true,
+      "settings": {
+        "sub_title": "Discover",
+        "title": "Karee Hays Esthetics",
+        "description": ""
+      }
+    },
+    "5cd0548e-5dae-445d-bfef-55f215f498fd": {
+      "type": "main-services-section-b",
+      "settings": {
+        "title": "Chemical Peels",
+        "description": "At Karee Hays Esthetics, a wide variety of skin care concerns can be addressed by our medical estheticians with a custom chemical peel solution. Common skin conditions that can be treated with chemical peels include sun damage, acne, fine lines, wrinkles and discoloration. Our chemical peels can be customized depending on the desired results. The specialty topical acids used by our estheticians lift away dead cells and allow products maximum penetration and absorption, resulting in an even more radiant complexion. Chemical peels can be formulated for usage on various parts of the body including but not limited to the face, neck and chest, hands, arms and legs.",
+        "buttonLink": "",
+        "buttonText": ""
+      }
+    },
+    "ee145abf-6494-4733-9b47-f92a1849851b": {
+      "type": "main-services-section-j",
+      "settings": {
+        "selected_collection": "chemical-peels"
+      }
+    },
+    "4786db8e-a940-4a3d-b7c2-58728d30ff7e": {
+      "type": "home-treatment",
+      "disabled": true,
+      "blocks": {
+        "1b1b76b0-cf32-464f-908b-f1d3adf2f02f": {
+          "type": "treatment",
+          "settings": {
+            "title": "",
+            "treatment_img": "shopify:\/\/shop_images\/20.png",
+            "page_link": ""
+          }
+        },
+        "7a805b2f-3e4b-44b0-9bd3-ea7021caea25": {
+          "type": "treatment",
+          "settings": {
+            "title": "",
+            "treatment_img": "shopify:\/\/shop_images\/18.png",
+            "page_link": ""
+          }
+        },
+        "c080bdd0-35dd-46ea-bc1d-1097a63455d8": {
+          "type": "treatment",
+          "settings": {
+            "title": "",
+            "treatment_img": "shopify:\/\/shop_images\/21.png",
+            "page_link": ""
+          }
+        },
+        "db6c39f7-b278-4d07-ba11-133f808a15cf": {
+          "type": "treatment",
+          "settings": {
+            "title": "",
+            "treatment_img": "shopify:\/\/shop_images\/19.png",
+            "page_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1b1b76b0-cf32-464f-908b-f1d3adf2f02f",
+        "7a805b2f-3e4b-44b0-9bd3-ea7021caea25",
+        "c080bdd0-35dd-46ea-bc1d-1097a63455d8",
+        "db6c39f7-b278-4d07-ba11-133f808a15cf"
+      ],
+      "settings": {
+        "sub_title": "",
+        "title": "",
+        "description": ""
+      }
+    },
+    "d01487e2-7d68-45ae-b7f5-09a186d971a4": {
+      "type": "main-services-section-j",
+      "disabled": true,
+      "settings": {
+        "selected_collection": "test-jv-collectoin"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main",
+    "5cd0548e-5dae-445d-bfef-55f215f498fd",
+    "ee145abf-6494-4733-9b47-f92a1849851b",
+    "4786db8e-a940-4a3d-b7c2-58728d30ff7e",
+    "d01487e2-7d68-45ae-b7f5-09a186d971a4"
+  ]
+}

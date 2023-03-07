@@ -1,1 +1,141 @@
-{"sections":{"main":{"type":"main-product","settings":{}},"16334184330467b4f1":{"type":"video","disabled":true,"settings":{"title":"How to use the product","video_code":"<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/hax9Ke7Djec\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"><\/iframe>"}},"additional_product":{"type":"product-additional","disabled":true,"blocks":{"fd30869f-0f6a-4aa1-9395-206657298b86":{"type":"products","settings":{"add_product":"avene-gentle-body-scrub"}},"e2f0de6c-a33c-4c24-8028-8c972b77a7ce":{"type":"products","settings":{"add_product":"glytone-enhance-brightening-complex"}},"3afd733b-f853-4ac4-99ad-892e305e9041":{"type":"products","settings":{"add_product":"kh-clean-daily-ha-pads"}},"acdd5db7-0b05-49a0-8962-cb84c96dc653":{"type":"products","settings":{"add_product":"kh-koji-pads"}}},"block_order":["fd30869f-0f6a-4aa1-9395-206657298b86","e2f0de6c-a33c-4c24-8028-8c972b77a7ce","3afd733b-f853-4ac4-99ad-892e305e9041","acdd5db7-0b05-49a0-8962-cb84c96dc653"],"settings":{"title":"Complete the glow","sub_title":"Additional products to compliment your routine","step":true}},"product_notes":{"type":"product-notes","disabled":true,"blocks":{"4e9553f0-5d29-45c4-854d-2279f5eb5431":{"type":"notes","settings":{"title":"Sustainability Note","desc":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in malesuada leo. Praesent finibus sagittis volutpat. Integer posuere non velit quis dignissim.<\/p>"}},"0dcb0391-5e21-4f2c-ad46-dcac48bfc47b":{"type":"notes","settings":{"title":"Shipping & Returns","desc":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in malesuada leo. Praesent finibus sagittis volutpat. Integer posuere non velit quis dignissim.<\/p>"}},"42e935c8-d0d8-44b0-a0d7-e3b7cf0280c8":{"type":"notes","settings":{"title":"Service Charter","desc":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in malesuada leo. Praesent finibus sagittis volutpat. Integer posuere non velit quis dignissim.<\/p>"}}},"block_order":["4e9553f0-5d29-45c4-854d-2279f5eb5431","0dcb0391-5e21-4f2c-ad46-dcac48bfc47b","42e935c8-d0d8-44b0-a0d7-e3b7cf0280c8"],"settings":{}},"product_info":{"type":"product-info","disabled":true,"blocks":{"13cfa266-739a-486f-ab72-6b6a7109a967":{"type":"info","settings":{"icon":"shopify:\/\/shop_images\/icon-sachets.png","title":"Complimentary sachets on all orders"}},"165fb57f-0e22-4775-8cf2-275f1a25fb6d":{"type":"info","settings":{"icon":"shopify:\/\/shop_images\/icon-travel.png","title":"Complimentary travel size product when you spend $400+"}},"bcdbef54-a7c6-42bc-a1b9-2dff60d0feca":{"type":"info","settings":{"icon":"shopify:\/\/shop_images\/icon-care.png","title":"Dedicated KH care 24\/7"}},"0def7536-ec9b-4aa0-85e5-1baf8fd7ef52":{"type":"info","settings":{"icon":"shopify:\/\/shop_images\/icon-wrapped.png","title":"Beautifully wrapped"}}},"block_order":["13cfa266-739a-486f-ab72-6b6a7109a967","165fb57f-0e22-4775-8cf2-275f1a25fb6d","bcdbef54-a7c6-42bc-a1b9-2dff60d0feca","0def7536-ec9b-4aa0-85e5-1baf8fd7ef52"],"settings":{}}},"order":["main","16334184330467b4f1","additional_product","product_notes","product_info"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+      }
+    },
+    "16334184330467b4f1": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "title": "How to use the product",
+        "video_code": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/hax9Ke7Djec\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"><\/iframe>"
+      }
+    },
+    "additional_product": {
+      "type": "product-additional",
+      "disabled": true,
+      "blocks": {
+        "fd30869f-0f6a-4aa1-9395-206657298b86": {
+          "type": "products",
+          "settings": {
+            "add_product": "avene-gentle-body-scrub"
+          }
+        },
+        "e2f0de6c-a33c-4c24-8028-8c972b77a7ce": {
+          "type": "products",
+          "settings": {
+            "add_product": "glytone-enhance-brightening-complex"
+          }
+        },
+        "3afd733b-f853-4ac4-99ad-892e305e9041": {
+          "type": "products",
+          "settings": {
+            "add_product": "kh-clean-daily-ha-pads"
+          }
+        },
+        "acdd5db7-0b05-49a0-8962-cb84c96dc653": {
+          "type": "products",
+          "settings": {
+            "add_product": "kh-koji-pads"
+          }
+        }
+      },
+      "block_order": [
+        "fd30869f-0f6a-4aa1-9395-206657298b86",
+        "e2f0de6c-a33c-4c24-8028-8c972b77a7ce",
+        "3afd733b-f853-4ac4-99ad-892e305e9041",
+        "acdd5db7-0b05-49a0-8962-cb84c96dc653"
+      ],
+      "settings": {
+        "title": "Complete the glow",
+        "sub_title": "Additional products to compliment your routine",
+        "step": true
+      }
+    },
+    "product_notes": {
+      "type": "product-notes",
+      "disabled": true,
+      "blocks": {
+        "4e9553f0-5d29-45c4-854d-2279f5eb5431": {
+          "type": "notes",
+          "settings": {
+            "title": "Sustainability Note",
+            "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in malesuada leo. Praesent finibus sagittis volutpat. Integer posuere non velit quis dignissim.<\/p>"
+          }
+        },
+        "0dcb0391-5e21-4f2c-ad46-dcac48bfc47b": {
+          "type": "notes",
+          "settings": {
+            "title": "Shipping & Returns",
+            "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in malesuada leo. Praesent finibus sagittis volutpat. Integer posuere non velit quis dignissim.<\/p>"
+          }
+        },
+        "42e935c8-d0d8-44b0-a0d7-e3b7cf0280c8": {
+          "type": "notes",
+          "settings": {
+            "title": "Service Charter",
+            "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in malesuada leo. Praesent finibus sagittis volutpat. Integer posuere non velit quis dignissim.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "4e9553f0-5d29-45c4-854d-2279f5eb5431",
+        "0dcb0391-5e21-4f2c-ad46-dcac48bfc47b",
+        "42e935c8-d0d8-44b0-a0d7-e3b7cf0280c8"
+      ],
+      "settings": {
+      }
+    },
+    "product_info": {
+      "type": "product-info",
+      "disabled": true,
+      "blocks": {
+        "13cfa266-739a-486f-ab72-6b6a7109a967": {
+          "type": "info",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-sachets.png",
+            "title": "Complimentary sachets on all orders"
+          }
+        },
+        "165fb57f-0e22-4775-8cf2-275f1a25fb6d": {
+          "type": "info",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-travel.png",
+            "title": "Complimentary travel size product when you spend $400+"
+          }
+        },
+        "bcdbef54-a7c6-42bc-a1b9-2dff60d0feca": {
+          "type": "info",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-care.png",
+            "title": "Dedicated KH care 24\/7"
+          }
+        },
+        "0def7536-ec9b-4aa0-85e5-1baf8fd7ef52": {
+          "type": "info",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-wrapped.png",
+            "title": "Beautifully wrapped"
+          }
+        }
+      },
+      "block_order": [
+        "13cfa266-739a-486f-ab72-6b6a7109a967",
+        "165fb57f-0e22-4775-8cf2-275f1a25fb6d",
+        "bcdbef54-a7c6-42bc-a1b9-2dff60d0feca",
+        "0def7536-ec9b-4aa0-85e5-1baf8fd7ef52"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16334184330467b4f1",
+    "additional_product",
+    "product_notes",
+    "product_info"
+  ]
+}

@@ -4,14 +4,17 @@
       "type": "services-banner",
       "settings": {
         "alignment": "center",
-        "banner_image": "shopify://shop_images/6_7f09c8c7-04ce-4f09-9b9e-85ffd283cc90.png"
+        "banner_image": "shopify:\/\/shop_images\/6_7f09c8c7-04ce-4f09-9b9e-85ffd283cc90.png"
       }
     },
-    "main": { "type": "main-services", "settings": {} },
+    "main": {
+      "type": "main-services",
+      "settings": {
+      }
+    },
     "00c3ad75-b44f-44c7-8cc8-d041ba88aa46": {
       "type": "main-services-section-j",
       "settings": {
-        "filtering": true,
         "selected_collection": "treatment-add-ons"
       }
     },
@@ -23,7 +26,7 @@
           "type": "treatment",
           "settings": {
             "title": "",
-            "treatment_img": "shopify://shop_images/20.png",
+            "treatment_img": "shopify:\/\/shop_images\/20.png",
             "page_link": ""
           }
         },
@@ -31,7 +34,7 @@
           "type": "treatment",
           "settings": {
             "title": "",
-            "treatment_img": "shopify://shop_images/18.png",
+            "treatment_img": "shopify:\/\/shop_images\/18.png",
             "page_link": ""
           }
         },
@@ -39,7 +42,7 @@
           "type": "treatment",
           "settings": {
             "title": "",
-            "treatment_img": "shopify://shop_images/21.png",
+            "treatment_img": "shopify:\/\/shop_images\/21.png",
             "page_link": ""
           }
         },
@@ -47,7 +50,7 @@
           "type": "treatment",
           "settings": {
             "title": "",
-            "treatment_img": "shopify://shop_images/19.png",
+            "treatment_img": "shopify:\/\/shop_images\/19.png",
             "page_link": ""
           }
         }
@@ -58,13 +61,16 @@
         "c080bdd0-35dd-46ea-bc1d-1097a63455d8",
         "db6c39f7-b278-4d07-ba11-133f808a15cf"
       ],
-      "settings": { "sub_title": "", "title": "", "description": "" }
+      "settings": {
+        "sub_title": "",
+        "title": "",
+        "description": ""
+      }
     },
     "d01487e2-7d68-45ae-b7f5-09a186d971a4": {
       "type": "main-services-section-j",
       "disabled": true,
       "settings": {
-        "filtering": false,
         "selected_collection": "test-jv-collectoin"
       }
     }

@@ -1,1 +1,59 @@
-{"sections":{"banner":{"type":"services-banner","settings":{"alignment":"center","banner_image":"shopify:\/\/shop_images\/21_729262be-e732-4963-b7ed-0d4114d15e04.png"}},"section-b":{"type":"main-services-section-b","settings":{"title":"At Karee Hays Esthetics, we believe all esthetic procedures should have natural and refreshing results.","description":"With constant anti-aging advancements in formulas and techniques, we provide our clients with customized restorative treatments. Karee Hays Esthetics offers a variety of facial fillers and neurotoxins that will enhance the facial anatomy by softening, correcting, restoring, reshaping and reversing signs of aging such as fine lines, wrinkles and volume loss. These injectable solutions provide our clients with beautiful, non-surgical results with minimal discomfort and little to no downtime.\n<br><br>Injectable Options\n<br> • Botox\n<br> • Dysport\n<br> • Juvederm fillers\n<br> • Restylane fillers\n<br> • Kybella\n<br> • Platelet Rich Plasma (PRP)","buttonLink":"#","buttonText":"REQUEST AN APPOINTMENT"}},"section-e":{"type":"main-services-section-e","disabled":true,"settings":{"img_left":"shopify:\/\/shop_images\/test.jpg","title_left":"EXPRESS GLOW","description_left":"A 45-minute version of the Glow Facial sans the lymphac massage; customized to your individual needs and concerns.","buttonLinkLeft":"#","buttonTextLeft":"SAMPLE TEXT","img_right":"shopify:\/\/shop_images\/test.jpg","title_right":"KH SIGNATURE FACIAL","description_right":"Our most luxurious and pampering service is a full hour and a half. It includes all the processes featured in the Glow Facial with an extended upper body massage.","buttonLinkRight":"#","buttonTextRight":"REQUEST AN APPOINTMENT"}},"d01487e2-7d68-45ae-b7f5-09a186d971a4":{"type":"main-services-section-j","settings":{"selected_collection":"injectables-page"}},"section-k":{"type":"home-quote","settings":{"quote_img":"shopify:\/\/shop_images\/17_6ca7b24a-1a47-40ea-b7e8-28c05221f048.png","quote":"Imperfections are beautiful, all you need is a little GLOW","author":"","btn_text":"","btn_link":""}}},"order":["banner","section-b","section-e","d01487e2-7d68-45ae-b7f5-09a186d971a4","section-k"]}
+{
+  "sections": {
+    "banner": {
+      "type": "services-banner",
+      "settings": {
+        "alignment": "center",
+        "banner_image": "shopify:\/\/shop_images\/21_729262be-e732-4963-b7ed-0d4114d15e04.png"
+      }
+    },
+    "section-b": {
+      "type": "main-services-section-b",
+      "settings": {
+        "title": "At Karee Hays Esthetics, we believe all esthetic procedures should have natural and refreshing results.",
+        "description": "With constant anti-aging advancements in formulas and techniques, we provide our clients with customized restorative treatments. Karee Hays Esthetics offers a variety of facial fillers and neurotoxins that will enhance the facial anatomy by softening, correcting, restoring, reshaping and reversing signs of aging such as fine lines, wrinkles and volume loss. These injectable solutions provide our clients with beautiful, non-surgical results with minimal discomfort and little to no downtime.\n<br><br>Injectable Options\n<br> • Botox\n<br> • Dysport\n<br> • Juvederm fillers\n<br> • Restylane fillers\n<br> • Kybella\n<br> • Platelet Rich Plasma (PRP)",
+        "buttonLink": "#",
+        "buttonText": "REQUEST AN APPOINTMENT"
+      }
+    },
+    "section-e": {
+      "type": "main-services-section-e",
+      "disabled": true,
+      "settings": {
+        "img_left": "shopify:\/\/shop_images\/test.jpg",
+        "title_left": "EXPRESS GLOW",
+        "description_left": "A 45-minute version of the Glow Facial sans the lymphac massage; customized to your individual needs and concerns.",
+        "buttonLinkLeft": "#",
+        "buttonTextLeft": "SAMPLE TEXT",
+        "img_right": "shopify:\/\/shop_images\/test.jpg",
+        "title_right": "KH SIGNATURE FACIAL",
+        "description_right": "Our most luxurious and pampering service is a full hour and a half. It includes all the processes featured in the Glow Facial with an extended upper body massage.",
+        "buttonLinkRight": "#",
+        "buttonTextRight": "REQUEST AN APPOINTMENT"
+      }
+    },
+    "d01487e2-7d68-45ae-b7f5-09a186d971a4": {
+      "type": "main-services-section-j",
+      "settings": {
+        "selected_collection": "injectables-page"
+      }
+    },
+    "section-k": {
+      "type": "home-quote",
+      "settings": {
+        "quote_img": "shopify:\/\/shop_images\/17_6ca7b24a-1a47-40ea-b7e8-28c05221f048.png",
+        "quote": "Imperfections are beautiful, all you need is a little GLOW",
+        "author": "",
+        "btn_text": "",
+        "btn_link": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "section-b",
+    "section-e",
+    "d01487e2-7d68-45ae-b7f5-09a186d971a4",
+    "section-k"
+  ]
+}

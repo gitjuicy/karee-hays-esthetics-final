@@ -4,13 +4,15 @@
       "type": "services-banner",
       "settings": {
         "alignment": "center",
-        "banner_image": "shopify://shop_images/Screen_Shot_2023-02-02_at_9.29.36_AM.png"
+        "banner_image": "shopify:\/\/shop_images\/Screen_Shot_2023-02-02_at_9.29.36_AM.png"
       }
     },
     "21fc127e-170d-4fc6-a959-49761d57bdc9": {
       "type": "main-collection-product-grid",
       "disabled": true,
-      "settings": { "filtering": false }
+      "settings": {
+        "filtering": false
+      }
     },
     "main": {
       "type": "main-press",
@@ -19,72 +21,72 @@
           "type": "news-article",
           "settings": {
             "title": "The Good Life",
-            "image": "shopify://shop_images/download.jpg",
-            "link": "https://www.juicyorange.com/", 
-            "content": "<p>This Green Hills studio manages to be both a medical skin-care center and a spa haven, a dichotomy that trickles down from founder Karee Hays, a medical aesthetician. The Glow Facial involves a deep-steam detox with extractions followed by microdermabrasion, dermaplaning, lymphatic massage, and a chemical peel. You’re sent home with a customized regimen and complimentary two-week follow-up, to make sure your skin is thriving—or at least well on its way.</p>"
+            "image": "shopify:\/\/shop_images\/download.jpg",
+            "link": "https:\/\/www.juicyorange.com\/",
+            "content": "<p>This Green Hills studio manages to be both a medical skin-care center and a spa haven, a dichotomy that trickles down from founder Karee Hays, a medical aesthetician. The Glow Facial involves a deep-steam detox with extractions followed by microdermabrasion, dermaplaning, lymphatic massage, and a chemical peel. You’re sent home with a customized regimen and complimentary two-week follow-up, to make sure your skin is thriving—or at least well on its way.<\/p>"
           }
         },
         "b5e2f657-42dc-4560-a6ec-459e38db93ef": {
           "type": "news-article",
           "settings": {
             "title": "The Good Life",
-            "image": "shopify://shop_images/download.jpg",
-            "link": "https://www.juicyorange.com/",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.</p>"
+            "image": "shopify:\/\/shop_images\/download.jpg",
+            "link": "https:\/\/www.juicyorange.com\/",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.<\/p>"
           }
         },
         "ea4ba072-9240-4fac-a6a5-fadfcff77508": {
           "type": "news-article",
           "settings": {
             "title": "The Good Life",
-            "image": "shopify://shop_images/download.jpg",
-            "link": "https://www.juicyorange.com/",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.</p>"
+            "image": "shopify:\/\/shop_images\/download.jpg",
+            "link": "https:\/\/www.juicyorange.com\/",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.<\/p>"
           }
         },
         "007d3934-5284-429e-880a-13fd4ffc2055": {
           "type": "news-article",
           "settings": {
             "title": "The Good Life",
-            "image": "shopify://shop_images/download.jpg",
-            "link": "https://www.juicyorange.com/",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.</p>"
+            "image": "shopify:\/\/shop_images\/download.jpg",
+            "link": "https:\/\/www.juicyorange.com\/",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.<\/p>"
           }
         },
         "bd877cee-627e-452b-82a5-68ac97900fd1": {
           "type": "news-article",
           "settings": {
             "title": "The Good Life",
-            "image": "shopify://shop_images/download.jpg",
-            "link": "https://www.juicyorange.com/",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.</p>"
+            "image": "shopify:\/\/shop_images\/download.jpg",
+            "link": "https:\/\/www.juicyorange.com\/",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.<\/p>"
           }
         },
         "2754dbd0-575b-4896-91dc-465c514882fe": {
           "type": "news-article",
           "settings": {
             "title": "The Good Life",
-            "image": "shopify://shop_images/download.jpg",
-            "link": "https://www.juicyorange.com/",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.</p>"
+            "image": "shopify:\/\/shop_images\/download.jpg",
+            "link": "https:\/\/www.juicyorange.com\/",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.<\/p>"
           }
         },
         "8f95f4ac-303a-49c2-b732-727c6f6f2904": {
           "type": "news-article",
           "settings": {
             "title": "The Good Life",
-            "image": "shopify://shop_images/download.jpg",
-            "link": "https://www.juicyorange.com/",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.</p>"
+            "image": "shopify:\/\/shop_images\/download.jpg",
+            "link": "https:\/\/www.juicyorange.com\/",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.<\/p>"
           }
         },
         "ebc7902b-2a16-4eeb-a1b6-8bcfbc7bad05": {
           "type": "news-article",
           "settings": {
             "title": "The Good Life",
-            "image": "shopify://shop_images/download.jpg",
-            "link": "https://www.juicyorange.com/",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.</p>"
+            "image": "shopify:\/\/shop_images\/download.jpg",
+            "link": "https:\/\/www.juicyorange.com\/",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed augue erat. Donec sed sem accumsan orci mattis accumsan eget et magna. In et maximus justo. Nullam in vestibulum libero, sed tristique sem. Phasellus suscipit, mi in molestie pellentesque, urna urna semper augue, quis dictum justo arcu at risus. Integer eu erat porta lacus eleifend semper. Donec vestibulum ipsum eget tellus euismod consequat.<\/p>"
           }
         }
       },
@@ -98,7 +100,8 @@
         "8f95f4ac-303a-49c2-b732-727c6f6f2904",
         "ebc7902b-2a16-4eeb-a1b6-8bcfbc7bad05"
       ],
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
