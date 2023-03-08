@@ -127,7 +127,7 @@
       }
     },
     "9cf360bd-7393-43f7-974f-a5763d95e6a5": {
-      "type": "home-blog",
+      "type": "blog-section",
       "settings": {
         "title": "Blog posts",
         "blog": "news"
@@ -142,6 +142,6 @@
     "943c0d0e-d49a-42d3-a86b-2d8dcdcb90bd",
     "2bb778bc-a4ac-4117-882d-f6618e97ed45",
     "request-and-shop",
-    "9cf360bd-7393-43f7-974f-a5763d95e6a5"
+    "blog-section"
   ]
 }
