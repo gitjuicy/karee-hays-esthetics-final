@@ -42,9 +42,9 @@
                 {% endif %}
 
                 <!-- Start Products Section -->
-                <div class="{% if section.settings.filtering %}col-lg-9{% else %} col-12 {% endif %}">
+                <div class="{% if section.settings.filtering %}col-lg-9{% else %} col-12 {% endif %} pb-5">
                     <div class="row" data-id="{{ section.id }}">
-                        {%- for product in collections['facials-page'].products -%}
+                        {%- for product in collections['facial-page'].products -%}
                             <div class="col-md-6 {% if section.settings.filtering %}col-lg-4{% else %} col-lg-3 {% endif %}">
                                 {% render 'product-card', product_card_product: product %}
                             </div>
