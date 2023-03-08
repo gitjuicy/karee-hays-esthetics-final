@@ -79,7 +79,7 @@
         "title": ""
       }
     },
-    "8869ceb5-2d45-4ac5-bbff-3a680adb5e58": {
+    "text_with_img": {
       "type": "home-text",
       "settings": {
         "title": "Maintaining Healthy Skin is a Lifestyle",
@@ -127,7 +127,7 @@
   "order": [
     "home_slider",
     "press_list",
-    "8869ceb5-2d45-4ac5-bbff-3a680adb5e58",
+    "text_with_img",
     "facials-collection-grid",
     "quote-and-img",
     "request-and-shop",
