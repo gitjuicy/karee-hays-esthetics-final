@@ -3,7 +3,7 @@
     "home_slider": {
       "type": "home-slider",
       "blocks": {
-        "5786b4d7-787a-4f23-ae0c-2d4e151e1d98": {
+        "slide-1": {
           "type": "slide",
           "settings": {
             "slide_img": "shopify:\/\/shop_images\/15_0d6b2543-ffe1-4f1c-bc2f-e082c6f7ebc5.png",
@@ -13,34 +13,10 @@
             "btn_link": "shopify:\/\/pages\/about",
             "alignment": "left"
           }
-        },
-        "b9dd3e41-0213-472d-a5e0-d80bc30d6f05": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "title": "Karee Hays Esthetics",
-            "desc": "The ultimate daily skincare practices to achieve clear, radiant skin",
-            "btn_text": "Discover More",
-            "btn_link": "",
-            "alignment": "left"
-          }
-        },
-        "414ebd12-daa7-4f1f-bd75-9ab128bc7426": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "title": "Karee Hays Esthetics",
-            "desc": "The ultimate daily skincare practices to achieve clear, radiant skin",
-            "btn_text": "Discover More",
-            "btn_link": "",
-            "alignment": "left"
-          }
         }
       },
       "block_order": [
-        "5786b4d7-787a-4f23-ae0c-2d4e151e1d98",
-        "b9dd3e41-0213-472d-a5e0-d80bc30d6f05",
-        "414ebd12-daa7-4f1f-bd75-9ab128bc7426"
+        "slide-1"
       ],
       "settings": {
       }
@@ -137,8 +113,8 @@
         "btn_link": ""
       }
     },
-    "c4509678-1a7f-417b-a738-e761118f6713": {
-      "type": "main-services-section-e",
+    "request-and-shop": {
+      "type": "request-and-shop",
       "settings": {
         "title_left": "SKINCARE PROFRESSIONALS",
         "description_left": "Our experienced staff is licensed\nand educated to perform the\nlatest advanced esthec,\ncosmec and laser treatments to\nenhance your natural beauty.",
@@ -165,7 +141,7 @@
     "8869ceb5-2d45-4ac5-bbff-3a680adb5e58",
     "943c0d0e-d49a-42d3-a86b-2d8dcdcb90bd",
     "2bb778bc-a4ac-4117-882d-f6618e97ed45",
-    "c4509678-1a7f-417b-a738-e761118f6713",
+    "request-and-shop",
     "9cf360bd-7393-43f7-974f-a5763d95e6a5"
   ]
 }
