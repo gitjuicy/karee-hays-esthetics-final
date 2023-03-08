@@ -97,8 +97,8 @@
         "buttonLink": ""
       }
     },
-    "943c0d0e-d49a-42d3-a86b-2d8dcdcb90bd": {
-      "type": "main-collection-product-grid",
+    "facials-collection-grid": {
+      "type": "facials-collection-grid",
       "settings": {
         "filtering": true
       }
@@ -139,7 +139,7 @@
     "home_center_text",
     "press_list",
     "8869ceb5-2d45-4ac5-bbff-3a680adb5e58",
-    "943c0d0e-d49a-42d3-a86b-2d8dcdcb90bd",
+    "facials-collection-grid",
     "quote-and-img",
     "request-and-shop",
     "blog-section"

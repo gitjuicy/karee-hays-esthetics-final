@@ -8,8 +8,7 @@
 {% endif %}
 
 <div class="container">
-    {%- paginate collections['Facial Page'].products by 8 -%}
-        {%- if collection.products.size == 0 -%}
+        {%- if collections.products.size == -1 -%}
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="empty-collection">   
@@ -45,9 +44,9 @@
                 <!-- Start Products Section -->
                 <div class="{% if section.settings.filtering %}col-lg-9{% else %} col-12 {% endif %}">
                     <div class="row" data-id="{{ section.id }}">
-                        {%- for product in collection.products -%}
+                        {%- for product in collections['facials-page'].products -%}
                             <div class="col-md-6 {% if section.settings.filtering %}col-lg-4{% else %} col-lg-3 {% endif %}">
-                                {% render 'product-card', product_card_product: product  %}
+                                {% render 'product-card', product_card_product: product %}
                             </div>
                         {%- endfor -%}
                     </div>        
@@ -63,13 +62,12 @@
             <!-- End Pagination -->
             
         {%- endif -%}
-    {%- endpaginate -%}
 </div>
 
 
 {% schema %}
 {
-    "name": "Collection Settings",
+    "name": "Facials Collection",
     "tag": "section",
     "class": "product-grid",
     "settings": [
