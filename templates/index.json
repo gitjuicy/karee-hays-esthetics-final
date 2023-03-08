@@ -124,7 +124,7 @@
     "943c0d0e-d49a-42d3-a86b-2d8dcdcb90bd": {
       "type": "main-collection-product-grid",
       "settings": {
-        "filtering": false
+        "filtering": true
       }
     },
     "2bb778bc-a4ac-4117-882d-f6618e97ed45": {
