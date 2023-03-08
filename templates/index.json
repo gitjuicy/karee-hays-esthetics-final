@@ -129,7 +129,7 @@
     "blog-section": {
       "type": "blog-section",
       "settings": {
-        "title": "Blog Section",
+        "title": "Blog Section", 
         "blog": "news"
       }
     }
