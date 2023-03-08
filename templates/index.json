@@ -21,16 +21,6 @@
       "settings": {
       }
     },
-    "home_center_text": {
-      "type": "center-text",
-      "disabled": true,
-      "settings": {
-        "main_text": "Karee Hays Esthetics",
-        "secondary_text": "The ultimate daily skincare practices to achieve clear, radiant skin",
-        "button_text": "Discover More",
-        "button_link": ""
-      }
-    },
     "press_list": {
       "type": "press-list",
       "blocks": {
@@ -100,7 +90,7 @@
     "943c0d0e-d49a-42d3-a86b-2d8dcdcb90bd": {
       "type": "main-collection-product-grid",
       "settings": {
-        "filtering": true
+        "filtering": false
       }
     },
     "quote-and-img": {
@@ -129,14 +119,13 @@
     "blog-section": {
       "type": "blog-section",
       "settings": {
-        "title": "Blog Section", 
+        "title": "Blog Section",
         "blog": "news"
       }
     }
   },
   "order": [
     "home_slider",
-    "home_center_text",
     "press_list",
     "8869ceb5-2d45-4ac5-bbff-3a680adb5e58",
     "943c0d0e-d49a-42d3-a86b-2d8dcdcb90bd",
