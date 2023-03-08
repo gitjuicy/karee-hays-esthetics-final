@@ -31,46 +31,46 @@
         "button_link": ""
       }
     },
-    "press_brands": {
-      "type": "press-brands",
+    "press_list": {
+      "type": "press-list",
       "blocks": {
         "7453f724-97f0-42ec-8b36-03ef5bf6b3e7": {
-          "type": "press-brand",
+          "type": "press-item",
           "settings": {
             "press_image": "shopify:\/\/shop_images\/glamour_31477a87-1c71-4de6-9baa-209f59c0d002.webp",
             "press_item_width": 2
           }
         },
         "7471fd89-2d4f-4db2-83ec-d058b4cc506d": {
-          "type": "press-brand",
+          "type": "press-item",
           "settings": {
             "press_image": "shopify:\/\/shop_images\/goop.webp",
             "press_item_width": 2
           }
         },
         "726f00f6-c0c2-4767-ba4a-ba84f1c82c55": {
-          "type": "press-brand",
+          "type": "press-item",
           "settings": {
             "press_image": "shopify:\/\/shop_images\/harpers-bazaar.webp",
             "press_item_width": 2
           }
         },
         "33d6b11a-33a6-452e-8a15-976e83c7a72e": {
-          "type": "press-brand",
+          "type": "press-item",
           "settings": {
             "press_image": "shopify:\/\/shop_images\/haute-living.webp",
             "press_item_width": 2
           }
         },
         "d66519a5-0b30-42de-9bf2-6d926e2a9698": {
-          "type": "press-brand",
+          "type": "press-item",
           "settings": {
             "press_image": "shopify:\/\/shop_images\/nashville-edit.webp",
             "press_item_width": 2
           }
         },
         "d86dd415-c54e-49cb-a9bb-3433537f19c8": {
-          "type": "press-brand",
+          "type": "press-item",
           "settings": {
             "press_image": "shopify:\/\/shop_images\/us-weekly_ff27d7b7-6ede-40f6-9249-c4f511b293d6.webp",
             "press_item_width": 2
@@ -137,7 +137,7 @@
   "order": [
     "home_slider",
     "home_center_text",
-    "press_brand",
+    "press_list",
     "8869ceb5-2d45-4ac5-bbff-3a680adb5e58",
     "943c0d0e-d49a-42d3-a86b-2d8dcdcb90bd",
     "quote-and-img",

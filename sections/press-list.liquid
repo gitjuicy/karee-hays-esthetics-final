@@ -1,4 +1,4 @@
-{{ 'section-press-brands.css' | asset_url | stylesheet_tag }}
+{{ 'section-press-list.css' | asset_url | stylesheet_tag }}
 
 <div class="press-container">
     <div style="max-width: 1200px; margin: 0 auto;">
@@ -34,7 +34,7 @@
 
 {% schema %}
 { 
-    "name": "Press Brands",
+    "name": "Press List",
     "tag": "section",
     "class": "spaced-section--full-width home-press",
     "settings": [
@@ -47,8 +47,8 @@
     ],
     "blocks": [
         {
-           "name": "Press Brand",
-           "type": "press-brand",
+           "name": "Press",
+           "type": "press-item",
            "settings": [
                {
                    "type": "image_picker",
