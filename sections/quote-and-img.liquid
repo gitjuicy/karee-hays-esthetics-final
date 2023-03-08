@@ -1,4 +1,4 @@
-{{ 'section-home-quote.css' | asset_url | stylesheet_tag }}
+{{ 'section-quote-and-img.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.quote_img %}
     <div class="relative px-0 overlay bg-image" style="background-image: url('{{ section.settings.quote_img | img_url: '1400x' | prepend: 'https:' }}');">
@@ -27,7 +27,7 @@
 
 {% schema %}
 {
-    "name": "Quote",
+    "name": "Quote And Image",
     "tag": "section",
     "class": "quote-section",
     "settings": [
@@ -62,7 +62,7 @@
     ],
     "presets": [
         {
-            "name": "Quote"
+            "name": "Quote And Image"
         }
     ]
 }

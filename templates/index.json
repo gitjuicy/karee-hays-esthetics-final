@@ -103,8 +103,8 @@
         "filtering": true
       }
     },
-    "2bb778bc-a4ac-4117-882d-f6618e97ed45": {
-      "type": "home-quote",
+    "quote-and-img": {
+      "type": "quote-and-img",
       "settings": {
         "quote_img": "shopify:\/\/shop_images\/45A0512.jpg",
         "quote": "Imperfections are beautiful, all you need is a little GLOW",
@@ -140,7 +140,7 @@
     "home_press",
     "8869ceb5-2d45-4ac5-bbff-3a680adb5e58",
     "943c0d0e-d49a-42d3-a86b-2d8dcdcb90bd",
-    "2bb778bc-a4ac-4117-882d-f6618e97ed45",
+    "quote-and-img",
     "request-and-shop",
     "blog-section"
   ]
