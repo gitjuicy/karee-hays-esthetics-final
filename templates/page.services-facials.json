@@ -4,7 +4,7 @@
       "type": "services-banner",
       "settings": {
         "alignment": "center",
-        "banner_image": "shopify://shop_images/N1A9804.jpg"
+        "banner_image": "shopify:\/\/shop_images\/N1A9804.jpg"
       }
     },
     "section-b": {
@@ -28,7 +28,7 @@
     "section-d": {
       "type": "main-services-section-d",
       "settings": {
-        "img": "shopify://shop_images/45A7769_1.jpg",
+        "img": "shopify:\/\/shop_images\/45A7769_1.jpg",
         "title": "THE GLOW FACIAL",
         "description": "Our most popular treatment is an hour-long experience tailored to each client’s skin type that begins with a deep steam cleaning followed by any necessary extractions, high frequency treatment to eliminate any toxins and bacteria, microdermabrasion and exfoliation treatment complimented by dermaplaning where a layer of peach-fuzz facial hair is shaved leaving the skin ultra smooth and open for maximum product absorption. After dermaplaning, a lymphatic massage is performed to improve circulation and reduce puffiness and the appearance of fine lines and wrinkles. Lastly, an optional custom chemical peel can be applied to regenerate and rejuvenate skin on a deeper cellular level.",
         "buttonLink": "#",
@@ -39,12 +39,12 @@
       "type": "request-and-shop",
       "disabled": true,
       "settings": {
-        "img_left": "shopify://shop_images/test.jpg",
+        "img_left": "shopify:\/\/shop_images\/test.jpg",
         "title_left": "EXPRESS GLOW",
         "description_left": "A 45-minute version of the Glow Facial sans the lymphac massage; customized to your individual needs and concerns.",
         "buttonLinkLeft": "#",
         "buttonTextLeft": "SAMPLE TEXT",
-        "img_right": "shopify://shop_images/test.jpg",
+        "img_right": "shopify:\/\/shop_images\/test.jpg",
         "title_right": "KH SIGNATURE FACIAL",
         "description_right": "Our most luxurious and pampering service is a full hour and a half. It includes all the processes featured in the Glow Facial with an extended upper body massage.",
         "buttonLinkRight": "#",
@@ -62,12 +62,15 @@
     },
     "section-f": {
       "type": "main-services-section-f",
-      "settings": { "buttonLink": "#", "buttonText": "REQUEST AN APPOINTMENT" }
+      "settings": {
+        "buttonLink": "#",
+        "buttonText": "REQUEST AN APPOINTMENT"
+      }
     },
     "gentlemans-facial": {
       "type": "gentlemans-facial",
       "settings": {
-        "img": "shopify://shop_images/45A1287.jpg",
+        "img": "shopify:\/\/shop_images\/45A1287.jpg",
         "title": "GENTLEMAN'S FACIAL",
         "description": "This 75-minute service includes a deep steam cleaning with any necessary extractions followed by a high frequency anti-bacterial treatment. Next comes microdermabrasion, dermaplaning (as needed), a lymphatic massage and a light chemical peel, as well as brow grooming and nose and ear waxing, as desired.",
         "buttonLink": "#",
@@ -94,12 +97,14 @@
     },
     "section-j": {
       "type": "main-services-section-j",
-      "settings": { "filtering": false, "selected_collection": "facial-page" }
+      "settings": {
+        "selected_collection": "facial-page"
+      }
     },
     "section-k": {
       "type": "quote-and-img",
       "settings": {
-        "quote_img": "shopify://shop_images/45A0614.jpg",
+        "quote_img": "shopify:\/\/shop_images\/45A0614.jpg",
         "quote": "Imperfections are beautiful, all you need is a little GLOW",
         "author": "",
         "btn_text": "",
@@ -109,17 +114,17 @@
     "section-l": {
       "type": "main-services-section-l",
       "settings": {
-        "img_left": "shopify://shop_images/1_1e5215c4-5a1e-4212-a7a1-3d65ac1fb79a.png",
+        "img_left": "shopify:\/\/shop_images\/1_1e5215c4-5a1e-4212-a7a1-3d65ac1fb79a.png",
         "title_left": "INJECTABLES",
         "description_left": "",
         "buttonLink_left": "#",
         "buttonTextLeft": "LEARN MORE",
-        "img_middle": "shopify://shop_images/9_cd49c986-435e-4135-95d7-800b62be86f3.png",
+        "img_middle": "shopify:\/\/shop_images\/9_cd49c986-435e-4135-95d7-800b62be86f3.png",
         "title_middle": "COSMETIC AESTHETICS",
         "description_middle": "",
         "buttonLink_middle": "#",
         "buttonTextMiddle": "LEARN MORE",
-        "img_right": "shopify://shop_images/16_a0224ce3-c1fa-48fd-b4c8-e9ddf6dd875f.png",
+        "img_right": "shopify:\/\/shop_images\/16_a0224ce3-c1fa-48fd-b4c8-e9ddf6dd875f.png",
         "title_right": "LASER TREATMENTS",
         "description_right": "",
         "buttonLink_right": "#",
