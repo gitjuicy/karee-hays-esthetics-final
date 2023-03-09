@@ -299,6 +299,9 @@
       "footer": {
         "type": "footer",
         "settings": {
+          "newsletter_title": "Subscribe to our newsletter",
+          "newsletter_desc": "To know more about Karee Hays Esthetics events, new products, and special promotions join our mailing list.",
+          "customer_service": "customer-service"
         }
       }
     },
