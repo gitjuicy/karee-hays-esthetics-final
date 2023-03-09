@@ -16,25 +16,25 @@
         "0ac3957c-9612-461c-a923-6895fb0e5538": {
           "type": "about-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/11.png"
+            "image": "shopify:\/\/shop_images\/11.webp"
           }
         },
         "3c682fcc-7d9d-4b11-84a9-e1a8a3094591": {
           "type": "about-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Karee-Door.jpg"
+            "image": "shopify:\/\/shop_images\/Karee-Door.webp"
           }
         },
         "2ccffbd5-350a-49d4-8aa1-db5c24ab4b4a": {
           "type": "about-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/12.png"
+            "image": "shopify:\/\/shop_images\/12.webp"
           }
         },
         "74c1051d-d1a0-4bba-b0dd-76eb5f08b52c": {
           "type": "about-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/13.png"
+            "image": "shopify:\/\/shop_images\/13.webp"
           }
         }
       },
@@ -56,7 +56,7 @@
     "1635337694ffa9eed4": {
       "type": "quote-and-img",
       "settings": {
-        "quote_img": "shopify:\/\/shop_images\/12_a853a279-6664-42c1-8bdc-c34da3d30fd4.png",
+        "quote_img": "shopify:\/\/shop_images\/12_a853a279-6664-42c1-8bdc-c34da3d30fd4.webp",
         "quote": "Karee Hays is a skincare genius. I have no words for how grateful I am to be this comfortable in my skin. Thanks to Karee and her team, my skin glows. -Kacey Musgraves, Recording Artist",
         "author": "Kacey Musgraves, Recording Artist",
         "btn_text": "View our products",
