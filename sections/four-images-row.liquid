@@ -21,7 +21,7 @@
     <div class="container">
         <div class="about-images mb-8">
             {% for block in section.blocks %}
-                {% if block.type == 'about-image' %}
+                {% if block.type == 'image' %}
                     {% render 'object-image', path: block.settings.image, alt: section.settings.title, resize: true %}
                 {% endif %}
             {% endfor %}
@@ -51,7 +51,7 @@
 
 {% schema %}
 {
-  "name": "Content",
+  "name": "Four Images In One Row",
   "tag": "section",
   "class": "about-main",
   "settings": [
@@ -76,8 +76,8 @@
   ],
   "blocks": [
         {
-            "name": "About Image",
-            "type": "about-image",
+            "name": "Image",
+            "type": "image",
             "limit": 4,
             "settings": [
                 {
