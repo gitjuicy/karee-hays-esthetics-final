@@ -15,23 +15,31 @@
       "blocks": {
         "74df0256-43a1-4c23-8703-56f9461dbf84": {
           "type": "lab-image",
-          "settings": { "image": "shopify://shop_images/17.png" }
+          "settings": {
+            "image": "shopify:\/\/shop_images\/17.webp"
+          }
         },
         "d456c7dd-2dab-46c0-888e-e4818cccdf75": {
           "type": "lab-image",
-          "settings": { "image": "shopify://shop_images/14.png" }
+          "settings": {
+            "image": "shopify:\/\/shop_images\/14.webp"
+          }
         },
         "f7963243-fd93-440a-b3f4-a83030879a64": {
           "type": "lab-image",
-          "settings": { "image": "shopify://shop_images/15.png" }
+          "settings": {
+            "image": "shopify:\/\/shop_images\/15.webp"
+          }
         },
         "364e92a4-3d6e-48c2-a642-5f2049640aa3": {
           "type": "lab-image",
-          "settings": { "image": "shopify://shop_images/16.png" }
+          "settings": {
+            "image": "shopify:\/\/shop_images\/16.webp"
+          }
         }
       },
       "block_order": [
-        "74df0256-43a1-4c23-8703-56f9461dbf84", 
+        "74df0256-43a1-4c23-8703-56f9461dbf84",
         "d456c7dd-2dab-46c0-888e-e4818cccdf75",
         "f7963243-fd93-440a-b3f4-a83030879a64",
         "364e92a4-3d6e-48c2-a642-5f2049640aa3"
@@ -39,9 +47,12 @@
       "settings": {
         "intro": "",
         "title": "For All Skin Types and Tones",
-        "description": "<p>KH Skin Lab is Karee Hays’ signature collection of advanced medical-grade products developed to provide skincare solutions for various dermatologic conditions. Our goal is to improve the skin's health and appearance while repairing damage without compromising the skins integrity. KH Skin Lab has been formulated to work synergistically with in-office treatments and services to achieve the famous Karee Hays Glow. Karee has developed products for all skin types, textures, and tones. KH Skin Lab contains rich moisturizers containing soothing ingredients, a range of weekly and daily use treatment pads, our very own tinted SPF, textured daily cleansers, and various strength retinol creams for anti-aging.</p>"
+        "description": "<p>KH Skin Lab is Karee Hays’ signature collection of advanced medical-grade products developed to provide skincare solutions for various dermatologic conditions. Our goal is to improve the skin's health and appearance while repairing damage without compromising the skins integrity. KH Skin Lab has been formulated to work synergistically with in-office treatments and services to achieve the famous Karee Hays Glow. Karee has developed products for all skin types, textures, and tones. KH Skin Lab contains rich moisturizers containing soothing ingredients, a range of weekly and daily use treatment pads, our very own tinted SPF, textured daily cleansers, and various strength retinol creams for anti-aging.<\/p>"
       }
     }
   },
-  "order": ["1659999351176db015", "main"]
-} 
+  "order": [
+    "1659999351176db015",
+    "main"
+  ]
+}
