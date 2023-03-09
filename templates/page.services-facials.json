@@ -36,7 +36,7 @@
       }
     },
     "section-e": {
-      "type": "main-services-section-e",
+      "type": "request-and-shop",
       "disabled": true,
       "settings": {
         "img_left": "shopify://shop_images/test.jpg",
@@ -51,8 +51,8 @@
         "buttonTextRight": "REQUEST AN APPOINTMENT"
       }
     },
-    "de934047-bc0d-48a5-a3a3-bfba6d350c76": {
-      "type": "main-services-section-h",
+    "facials-content-1": {
+      "type": "facials-content",
       "settings": {
         "title_left": "EXPRESS GLOW",
         "description_left": "A 45-minute version of the Glow Facial sans the lymphac massage; customized to your individual needs and concerns.",
@@ -64,8 +64,8 @@
       "type": "main-services-section-f",
       "settings": { "buttonLink": "#", "buttonText": "REQUEST AN APPOINTMENT" }
     },
-    "section-g": {
-      "type": "main-services-section-g",
+    "gentlemans-facial": {
+      "type": "gentlemans-facial",
       "settings": {
         "img": "shopify://shop_images/45A1287.jpg",
         "title": "GENTLEMAN'S FACIAL",
@@ -74,8 +74,8 @@
         "buttonText": "REQUEST AN APPOINTMENT"
       }
     },
-    "section-h": {
-      "type": "main-services-section-h",
+    "facials-content-2": {
+      "type": "facials-content",
       "settings": {
         "title_left": "TEEN CLEAN FACIAL",
         "description_left": "Our Teen Clean Facial is an adolescent- friendly facial specifically formulated to treat breakouts and acne, control oil production, unplug compactions, eliminate bacteria and reduce inflammation. This deep cleansing treatment is 45 minutes long and focuses on gentle extractions and educating those under 18 on proper skincare habits for optimal skin health.",
@@ -97,7 +97,7 @@
       "settings": { "filtering": false, "selected_collection": "facial-page" }
     },
     "section-k": {
-      "type": "home-quote",
+      "type": "quote-and-img",
       "settings": {
         "quote_img": "shopify://shop_images/45A0614.jpg",
         "quote": "Imperfections are beautiful, all you need is a little GLOW",
@@ -133,10 +133,10 @@
     "section-c",
     "section-d",
     "section-e",
-    "de934047-bc0d-48a5-a3a3-bfba6d350c76",
+    "facials-content-1",
     "section-f",
-    "section-g",
-    "section-h",
+    "gentlemans-facial",
+    "facials-content-2",
     "section-i",
     "section-j",
     "section-k",

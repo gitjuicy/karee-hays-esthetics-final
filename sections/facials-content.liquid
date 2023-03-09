@@ -1,0 +1,47 @@
+{{ 'component-main-services.css' | asset_url | stylesheet_tag }}
+
+<div class="container">
+  <div class="services-section-h row">
+    <div class="section-h-left col-md-6 col-sm-12">
+      <h3>{{ section.settings.title_left }}</h3>
+      <p>{{ section.settings.description_left }}</p>
+    </div>
+    <div class="section-h-right col-md-6 col-sm-12">
+      <h3>{{ section.settings.title_right }}</h3>
+      <p>{{ section.settings.description_right }}</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Facials, Section H",
+    "tag": "section",
+    "class": "spaced-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title_left",
+        "label": "Left Title"
+      }, {
+        "type": "textarea",
+        "id": "description_left",
+        "label": "Left Description"
+      }, {
+        "type": "text",
+        "id": "title_right",
+        "label": "Right Title"
+      }, {
+        "type": "textarea",
+        "id": "description_right",
+        "label": "Right Description"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Section H",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}
