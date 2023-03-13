@@ -1,23 +1,5 @@
 {{ 'section-main-staff.css' | asset_url | stylesheet_tag }}
 
-<!-- Start Heading -->
-{% comment %} <div class="d-block relative heading">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 center">
-                <h1 class="mt-8 mb-8 uppercase">{{ page.title }}</h1>
-
-                {% if collection.description != blank %}
-                    <div class="mb-8 rte center">
-                        {{ page.content }}
-                    </div>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div> {% endcomment %}
-<!-- End Heading -->
-
 <!-- Start Staff -->
 {% if section.blocks.size > 0 %}
     <div class="container">
