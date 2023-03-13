@@ -152,7 +152,6 @@
       "settings": {
         "title": "Facials",
         "desc": "<p>We are dedicated to providing corrective skincare treatments with a purpose. Whether clients are looking for assistance with an anti-aging regimen, a remedial treatment for acneic skin, or simply looking to indulge in a therapeutic experience, our custom facials offer solutions for every skin type.<\/p>",
-        "image": "shopify:\/\/shop_images\/Missy_0d4e8563-e886-4e1c-a373-73501b44bbff.jpg",
         "order": false
       }
     },
@@ -162,7 +161,6 @@
       "settings": {
         "title": "Injectables and Neuromodulators",
         "desc": "<p>At Karee Hays Esthetics we believe all esthetic procedures should have natural, refreshed-looking results. With constant anti-aging advancements in formulas and techniques, we are able to provide our clients with customized restorative treatments. We offer a variety of facial fillers and neurotoxins that will enhance the facial anatomy by softening, correcting, restoring, reshaping and reversing signs of aging such as fine lines, wrinkles and volume loss. These injectable solutions provide our clients with beautiful, non-surgical results with minimal discomfort and little to no downtime.<\/p>\n<ul>\n<li>Botox<\/li>\n<li>Dysport<\/li>\n<li>Juvederm fillers<\/li>\n<li>Restylane fillers<\/li>\n<li>Kybella<\/li>\n<li>Platelet Rich Plasma (PRP)<\/li>\n<\/ul>",
-        "image": "shopify:\/\/shop_images\/B12.jpg",
         "order": true
       }
     },
@@ -264,7 +262,6 @@
       "settings": {
         "title": "Advanced Aesthetic and Laser Treatments",
         "desc": "",
-        "image": "shopify:\/\/shop_images\/N1A9804.jpg",
         "order": false
       }
     },
@@ -274,7 +271,6 @@
       "settings": {
         "title": "Chemical Peels",
         "desc": "At Karee Hays Esthetics, a wide variety of skin care concerns can be addressed by our medical estheticians with a custom chemical peel solution. Common skin conditions that can be treated with chemical peels include sun damage, acne, fine lines, wrinkles and discoloration. Our chemical peels can be customized depending on the desired results. The specialty topical acids used by our estheticians lift away dead cells and allow products maximum penetration and absorption, resulting in an even more radiant complexion. Chemical peels can be formulated for usage on various parts of the body including but not limited to the face, neck and chest, hands, arms and legs.",
-        "image": "shopify:\/\/shop_images\/N1A0184.jpg",
         "order": true
       }
     },
@@ -320,7 +316,6 @@
       "settings": {
         "title": "Cosmetic Aesthetics",
         "desc": "",
-        "image": "shopify:\/\/shop_images\/N1A9809.jpg",
         "order": false
       }
     },
@@ -358,7 +353,6 @@
       "settings": {
         "title": "Treatment Add-Ons",
         "desc": "",
-        "image": "shopify:\/\/shop_images\/Adjustments.jpg",
         "order": true
       }
     },
