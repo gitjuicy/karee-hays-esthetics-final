@@ -16,35 +16,19 @@
         "buttonText": "REQUEST AN APPOINTMENT"
       }
     },
-    "section-e": {
-      "type": "main-services-section-e",
-      "disabled": true,
-      "settings": {
-        "img_left": "shopify:\/\/shop_images\/test.jpg",
-        "title_left": "EXPRESS GLOW",
-        "description_left": "A 45-minute version of the Glow Facial sans the lymphac massage; customized to your individual needs and concerns.",
-        "buttonLinkLeft": "#",
-        "buttonTextLeft": "SAMPLE TEXT",
-        "img_right": "shopify:\/\/shop_images\/test.jpg",
-        "title_right": "KH SIGNATURE FACIAL",
-        "description_right": "Our most luxurious and pampering service is a full hour and a half. It includes all the processes featured in the Glow Facial with an extended upper body massage.",
-        "buttonLinkRight": "#",
-        "buttonTextRight": "REQUEST AN APPOINTMENT"
-      }
-    },
     "d01487e2-7d68-45ae-b7f5-09a186d971a4": {
       "type": "main-services-section-j",
       "settings": {
         "selected_collection": "injectables-page"
       }
     },
-    "section-k": {
-      "type": "home-quote",
+    "27605764-cb64-4c08-b841-f8f42f037b1d": {
+      "type": "quote-and-img",
       "settings": {
         "quote_img": "shopify:\/\/shop_images\/17_6ca7b24a-1a47-40ea-b7e8-28c05221f048.png",
         "quote": "Imperfections are beautiful, all you need is a little GLOW",
-        "author": "",
-        "btn_text": "",
+        "author": "KH",
+        "btn_text": "Treat yourself today",
         "btn_link": ""
       }
     }
@@ -52,8 +36,7 @@
   "order": [
     "banner",
     "section-b",
-    "section-e",
     "d01487e2-7d68-45ae-b7f5-09a186d971a4",
-    "section-k"
+    "27605764-cb64-4c08-b841-f8f42f037b1d"
   ]
 }
