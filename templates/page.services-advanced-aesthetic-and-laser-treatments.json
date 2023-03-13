@@ -28,17 +28,9 @@
     "6adf5907-eea3-4918-8f91-1917e3d4706d": {
       "type": "main-services-section-d",
       "settings": {
+        "img": "shopify:\/\/shop_images\/45A7580.jpg",
         "title": "KH Trilogy Laser Facial",
         "description": "A carefully curated triple-tier approach to skin rejuvenation. Our laser technician begins with a round of IPL, followed by a round of Glow, and concludes the Trilogy with a secondary IPL pass. The Glow portion gently heats the dermis to improve skin texture and encourages new collagen production while the IPL portion improves the superficial appearance of the skin by addressing pigmentation, redness, brown spots and other signs of aging with minimal discomfort. These treatments when used in sync with one another maximize the efficiency of the treatment to produce optimal results in just one session.",
-        "buttonLink": "",
-        "buttonText": ""
-      }
-    },
-    "026eed17-6251-421e-8672-627b44e190e6": {
-      "type": "main-services-section-c",
-      "settings": {
-        "title": "",
-        "description": "",
         "buttonLink": "",
         "buttonText": ""
       }
@@ -107,7 +99,6 @@
     "main",
     "356e33a7-785f-4bc5-8ad1-6c39f51acd5f",
     "6adf5907-eea3-4918-8f91-1917e3d4706d",
-    "026eed17-6251-421e-8672-627b44e190e6",
     "66307d09-1ea9-4842-b771-a8be174d48a3",
     "4786db8e-a940-4a3d-b7c2-58728d30ff7e",
     "d01487e2-7d68-45ae-b7f5-09a186d971a4"
