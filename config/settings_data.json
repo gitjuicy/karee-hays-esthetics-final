@@ -16,7 +16,7 @@
           "add7b3b1-182c-4e57-9616-08e44c9a38d4": {
             "type": "megamenu1",
             "settings": {
-              "ddmenu": "",
+              "ddmenu": "shop-by-brand",
               "ddm_width": 4,
               "col_title": "",
               "col_select": "",
@@ -33,7 +33,7 @@
           "d2d2ba47-abff-416b-8cb3-75ac11698e03": {
             "type": "megamenu1",
             "settings": {
-              "ddmenu": "",
+              "ddmenu": "shop-by-product",
               "ddm_width": 4,
               "col_title": "",
               "col_select": "",
@@ -50,7 +50,7 @@
           "1774ece0-4a77-4d1a-85d7-db897876bca2": {
             "type": "megamenu1",
             "settings": {
-              "ddmenu": "",
+              "ddmenu": "shop-by-type",
               "ddm_width": 4,
               "col_title": "",
               "col_select": "",
@@ -84,7 +84,7 @@
           "cd894813-7df1-4f26-8f4d-5b57e5f4f163": {
             "type": "megamenu2",
             "settings": {
-              "ddmenu": "",
+              "ddmenu": "our-specialty",
               "ddm_width": 4,
               "col_title": "",
               "col_select": "",
@@ -107,6 +107,7 @@
               "col_select": "",
               "col_width": 3,
               "banner_title": "Virtual Consultations",
+              "banner": "shopify:\/\/shop_images\/therapy_750x_07591af6-3f49-4020-b13c-3bd710e9e22a.webp",
               "banner_width": 4,
               "title": "",
               "description": "",
@@ -124,6 +125,7 @@
               "col_select": "",
               "col_width": 3,
               "banner_title": "VISIT US: THE FAMOUS KH GLOW FACIAL",
+              "banner": "shopify:\/\/shop_images\/facial_750x_e59190cb-acdf-4d88-825b-5bd0f840192c.webp",
               "banner_width": 4,
               "title": "",
               "description": "",
@@ -158,6 +160,7 @@
               "col_select": "",
               "col_width": 4,
               "banner_title": "",
+              "banner": "shopify:\/\/shop_images\/skin-lab_750x_afe566e1-047c-45d2-8f5a-147bda724678.webp",
               "banner_width": 4,
               "title": "",
               "description": "",
@@ -186,7 +189,7 @@
           "faa59f64-0416-44b2-876c-595b5005a005": {
             "type": "megamenu4",
             "settings": {
-              "ddmenu": "",
+              "ddmenu": "the-karee-way",
               "ddm_width": 2,
               "col_title": "",
               "col_select": "",
@@ -209,6 +212,7 @@
               "col_select": "",
               "col_width": 3,
               "banner_title": "",
+              "banner": "shopify:\/\/shop_images\/special-offers.webp",
               "banner_width": 4,
               "title": "",
               "description": "",
@@ -237,7 +241,7 @@
           "115fac2c-8a37-4b59-9adb-f48ce02ec7f5": {
             "type": "megamenu5",
             "settings": {
-              "ddmenu": "",
+              "ddmenu": "press",
               "ddm_width": 3,
               "col_title": "",
               "col_select": "",
@@ -260,6 +264,7 @@
               "col_select": "",
               "col_width": 3,
               "banner_title": "LANDYN’S FAVES",
+              "banner": "shopify:\/\/shop_images\/faves.webp",
               "banner_width": 9,
               "title": "",
               "description": "",
